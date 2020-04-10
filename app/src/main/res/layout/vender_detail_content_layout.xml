@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    
+        >
+         <RelativeLayout
+		       
+		       
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:layout_marginTop="5dp"
+		        android:layout_marginLeft="2dp"
+		        android:layout_marginRight="2dp"
+		        android:background="@drawable/login_top_background" >
+		
+		        <TextView
+		           
+		            android:id="@+id/vender_detail_content_name_text"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="2dp"
+		            
+		            android:text="@string/vender_name_m"
+		           
+		           	android:textColor="#000"
+		            android:textSize="17sp" />
+			    <TextView
+		            android:id="@+id/vender_detail_content_name_content"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="8dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_toRightOf="@+id/vender_detail_content_name_text"
+		            android:background="@null"
+		           
+		            
+		            
+		            android:textColor="#555"
+		            android:textSize="16sp" />
+			    </RelativeLayout>
+		    <RelativeLayout
+		        
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:layout_marginLeft="2dp"
+		        android:layout_marginRight="2dp"
+		        android:background="@drawable/login_middle_background" >
+		
+		        <TextView
+		            android:id="@+id/vender_detail_content_addr_text"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="2dp"
+		            
+		            android:text="@string/vender_addr_m"
+		           	android:textColor="#000"
+		            android:textSize="17sp" />
+			    <TextView
+		            android:id="@+id/vender_detail_content_addr_content"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="8dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_toRightOf="@+id/vender_detail_content_addr_text"
+		            android:background="@null"
+		           
+		            
+		            
+		            android:textColor="#555"
+		            android:textSize="16sp" />
+			    </RelativeLayout>
+		<RelativeLayout
+		        
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="2dp"
+		        android:layout_marginRight="2dp"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:background="@drawable/login_bottom_background" >
+		
+		        <TextView
+		            android:id="@+id/vender_detail_content_comment_text"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		             android:layout_centerVertical="true"
+		            android:layout_marginLeft="2dp"
+		          
+		            android:text="@string/vender_comment_m"
+		           android:maxLength="20"
+		           	android:textColor="#000"
+		            android:textSize="17sp" />
+			    <TextView
+		            android:id="@+id/vender_detail_content_comment_content"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            
+		            android:layout_marginLeft="8dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_toRightOf="@+id/vender_detail_content_comment_text"
+		            android:background="@null"
+		          
+		           
+		        
+		            android:textColor="#555"
+		            android:textSize="16sp" />
+			    </RelativeLayout>
+
+	<TextView
+            android:id="@+id/vender_detail_content_pic_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="left"
+            android:text="@string/vender_pic_m"
+        
+           	android:textColor="#000"
+            android:textSize="17sp" />
+	    <LinearLayout
+	        android:id="@+id/vender_detail_image_multi_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/login_imput_background"
+	        android:layout_marginLeft="2dp"
+		    android:layout_marginRight="2dp"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginBottom="10dp"
+	        
+	        android:orientation="horizontal" >
+
+        
+
+            <LinearLayout
+                android:id="@+id/vender_detail_multi_image_layout1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:paddingRight="10dp"
+                android:layout_marginLeft="10dp"
+                >
+                <ImageView
+                    android:id="@+id/vender_detail_weibo_multi_image1"
+	                android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onViewVenderPic"
+                    android:contentDescription="@string/image_content"
+                    />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/vender_detail_multi_image_layout2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:paddingRight="10dp"
+                >
+                <ImageView
+                     android:id="@+id/vender_detail_weibo_multi_image2"
+	                android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onViewVenderPic"
+                    android:contentDescription="@string/image_content"
+                    />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/vender_detail_multi_image_layout3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:paddingRight="10dp"
+                >
+                <ImageView
+                     android:id="@+id/vender_detail_weibo_multi_image3"
+	                android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onViewVenderPic"
+                    android:contentDescription="@string/image_content"
+                    />
+            </LinearLayout>
+
+      </LinearLayout>
+
+
+    
+    
+
+
+</LinearLayout>

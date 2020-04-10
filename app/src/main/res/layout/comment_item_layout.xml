@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  	android:background="@null"
+    android:orientation="vertical"
+    android:paddingBottom="1dp"
+    >
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="4dp"
+   	android:background="@drawable/comment_detail_middle_sel">
+    
+    <FrameLayout
+    	 android:id="@+id/comment_item_touxiang_framelayout"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginTop="8dp">
+	    <carweibo.netradar.lichao.RoundImageView
+	        android:id="@+id/comment_item_touxiang"
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:layout_gravity="left|top"
+	        android:clickable="true"
+     		android:onClick="onUserWeibo1"
+	        android:src="@drawable/switchuser" />
+	     <ImageView
+	                android:id="@+id/comment_item_vip_sign"
+	                android:layout_width="16dp"
+	                android:layout_height="16dp"
+	                android:layout_gravity="right|bottom"
+	                
+	                android:src="@drawable/avatar_vip" />
+ </FrameLayout>
+    	
+    	
+    	<TextView
+	        android:id="@+id/comment_item_nickname"
+	        android:layout_width="200dp"
+	        android:layout_height="wrap_content"
+	     	android:layout_alignTop="@+id/comment_item_touxiang_framelayout"
+	       	android:layout_marginLeft="10dp"
+	       	android:layout_toRightOf="@+id/comment_item_touxiang_framelayout"
+	       
+	        android:textColor="#336699"
+	        android:textSize="15sp"
+	         />
+     	<ImageView
+	    	android:id="@+id/comment_item_comment"
+	     	android:layout_width="wrap_content"
+	       	android:layout_height="wrap_content"        	     	
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="10dp"
+	        android:layout_alignTop="@+id/comment_item_nickname"
+	       
+	        android:clickable="true"
+	        android:onClick="onCommentToComment"
+	        android:background="@drawable/comment_btn_sel" />
+    <TextView
+        android:id="@+id/comment_item_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_item_nickname"
+        android:layout_alignLeft="@+id/comment_item_nickname"
+       	android:layout_marginTop="5dp"
+      	android:layout_marginRight="10dp"
+     	
+        android:textColor="#444"
+        android:textSize="14sp"/>
+	<TextView
+        android:id="@+id/comment_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_item_content"
+        android:layout_alignLeft="@+id/comment_item_content"
+       	android:layout_marginTop="10dp"
+       	android:layout_marginBottom="5dp"
+      	android:textColor="#777"
+        android:textSize="10sp"/>
+
+   
+</RelativeLayout>
+</LinearLayout>

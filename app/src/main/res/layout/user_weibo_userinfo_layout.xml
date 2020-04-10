@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_weibo_userinfo_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:paddingBottom="10dp"
+	android:background="@drawable/weibo_item_background_sel">
+    
+<!--  <FrameLayout
+    		android:id="@+id/user_weibo_userinfo_touxiang_framelayout"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginLeft="8dp"
+	        android:layout_marginTop="12dp"
+	        >
+    <carweibo.netradar.lichao.RoundImageView
+        android:id="@+id/user_weibo_userinfo_touxiang"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="left|top"
+       
+        android:src="@drawable/switchuser" />
+     <ImageView
+                android:id="@+id/user_weibo_userinfo_vip_sign"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="right|bottom"
+                android:visibility="gone"
+                android:src="@drawable/avatar_vip" />
+ </FrameLayout> -->
+
+  
+	<LinearLayout 
+	    android:id="@+id/user_weibo_userinfo_nickname_layout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    
+	   	android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginLeft="8dp"
+	        android:layout_marginTop="12dp"
+	    android:orientation="horizontal"
+	        >
+		    <TextView
+		       
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        
+		        android:singleLine="true"
+		       	android:layout_gravity="center"
+		        
+		        android:text="昵称："
+		        android:textColor="#444"
+		        android:textSize="15sp"/>
+		     <TextView
+		        android:id="@+id/user_weibo_userinfo_nickname"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="10dp"
+		        android:singleLine="true"
+		       	android:gravity="center"
+		        
+		        
+		        android:textColor="#777"
+		        android:textSize="14sp"/>
+	</LinearLayout>
+	<LinearLayout 
+	    android:id="@+id/user_weibo_userinfo_time_layout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	   	android:layout_alignLeft="@+id/user_weibo_userinfo_nickname_layout"
+		android:layout_below="@+id/user_weibo_userinfo_nickname_layout"
+		             
+	    android:orientation="horizontal"
+	        >
+		    <TextView
+		       
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        
+		        android:singleLine="true"
+		       	android:gravity="center"
+		      
+		        android:text="注册："
+		        android:textColor="#444"
+		        android:textSize="15sp"/>
+		     <TextView
+		        android:id="@+id/user_weibo_userinfo_time"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		       
+		        android:singleLine="true"
+		       	android:gravity="center"
+		       
+		        
+		        android:textColor="#777"
+		        android:textSize="14sp"/>
+	</LinearLayout>
+	<LinearLayout 
+	    android:id="@+id/user_weibo_userinfo_weibonum_layout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	   	android:layout_alignLeft="@+id/user_weibo_userinfo_time_layout"
+		android:layout_below="@+id/user_weibo_userinfo_time_layout"
+		             
+	    android:orientation="horizontal"
+	        >
+		    <TextView
+		       
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        
+		        android:singleLine="true"
+		       	android:gravity="left"
+		        
+		        android:text="发帖："
+		        android:textColor="#444"
+		        android:textSize="15sp"/>
+		     <TextView
+		        android:id="@+id/user_weibo_userinfo_weibonum"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		       
+		        android:singleLine="true"
+		       	android:gravity="left"
+		       
+		        
+		        android:textColor="#777"
+		        android:textSize="14sp"/>
+	</LinearLayout>
+	<LinearLayout 
+	    android:id="@+id/user_weibo_userinfo_replynum_layout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	   	android:layout_alignLeft="@+id/user_weibo_userinfo_weibonum_layout"
+		android:layout_below="@+id/user_weibo_userinfo_weibonum_layout"
+		             
+	    android:orientation="horizontal"
+	        >
+		    <TextView
+		       
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        
+		        android:singleLine="true"
+		       	android:gravity="left"
+		        
+		        android:text="回帖："
+		        android:textColor="#444"
+		        android:textSize="15sp"/>
+		     <TextView
+		        android:id="@+id/user_weibo_userinfo_replynum"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		       
+		        android:singleLine="true"
+		       	android:gravity="left"
+		       
+		        
+		        android:textColor="#777"
+		        android:textSize="14sp"/>
+	</LinearLayout>	
+	<LinearLayout 
+	    android:id="@+id/user_weibo_userinfo_grade_layout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	   	android:layout_alignLeft="@+id/user_weibo_userinfo_replynum_layout"
+		android:layout_below="@+id/user_weibo_userinfo_replynum_layout"
+		             
+	    android:orientation="horizontal"
+	        >
+		    <TextView
+		       
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        
+		        android:singleLine="true"
+		       	android:gravity="center"
+		        
+		        android:text="等级："
+		        android:textColor="#444"
+		        android:textSize="15sp"/>
+		     <TextView
+		        android:id="@+id/user_weibo_userinfo_grade"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		       
+		        android:singleLine="true"
+		       	android:gravity="left"
+		       
+		        
+		        android:textColor="#777"
+		        android:textSize="14sp"/>
+	</LinearLayout>	
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/share_dialog"
+   android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="50dp"
+    android:layout_marginBottom="50dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+ 	android:gravity="center_horizontal"
+    android:background="@drawable/confirm_dialog_bg2"
+    android:orientation="vertical" >
+  <RelativeLayout 
+   android:id="@+id/hintversion"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+ 	android:gravity="center_horizontal"
+ 	android:layout_marginTop="20dp"
+    android:layout_marginLeft="10dp"
+   	android:layout_marginRight="10dp"
+    android:orientation="horizontal" >  
+            <TextView
+                android:id="@+id/verhint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+				
+               
+              
+                android:textColor="#2E8B57"
+                android:textSize="18sp"
+                android:text="把违章情况分享给" />
+</RelativeLayout>
+  <FrameLayout 
+   
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+ 	android:gravity="left"
+ 	android:layout_marginTop="3dp"
+ 	android:layout_below="@+id/hintversion"
+ 	android:layout_marginLeft="30dp"
+ 	android:layout_marginRight="30dp"
+    android:orientation="horizontal" >     
+              <TextView
+                android:id="@+id/textnewversionfunc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#555"
+                android:autoLink="web"
+                android:textSize="16sp"
+                 />
+<RelativeLayout 
+   android:id="@+id/progressRlayout"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+
+	android:layout_marginTop="50dp"
+	android:visibility="gone"
+    android:orientation="vertical" >  
+              <ProgressBar
+                  android:id="@+id/progressBarDownLoad"
+                  style="@android:style/Widget.ProgressBar.Horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="15dp"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentTop="true" 
+                
+                  
+                  android:progressDrawable="@drawable/progress_drawable"
+           	 />
+            <TextView
+                android:id="@+id/progresshint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#555"
+                android:textSize="16sp"
+                android:layout_below="@+id/progressBarDownLoad"
+                android:layout_alignRight="@+id/progressBarDownLoad"
+                android:layout_marginTop="3dp"
+                 />              
+	</RelativeLayout>
+  </FrameLayout>>
+
+    <RelativeLayout 
+   
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+ 	android:gravity="center_horizontal"
+ 	android:layout_alignParentBottom="true"
+ 	android:layout_marginBottom="10dp"
+    android:orientation="horizontal" > 
+    <TextView
+        android:id="@+id/dialog_cancel1"
+        android:layout_width="90dp"
+        android:layout_height="38dp"
+      	
+       
+
+        android:textColor="#000"
+        android:clickable="true"
+       android:textSize="17sp"
+       	android:gravity="center"
+        android:background="@drawable/btn_dialog_cancel"
+        android:onClick="onCancelNewVersion"
+        android:text="取消" />
+        <TextView
+        android:id="@+id/dialog_ok_update"
+        android:layout_width="90dp"
+        android:layout_height="38dp"
+      	android:layout_toRightOf="@+id/dialog_cancel1"
+      	android:layout_marginLeft="50dp"
+      	android:layout_alignTop="@+id/dialog_cancel1"
+       
+
+        android:textColor="#fff"
+        android:clickable="true"
+       android:textSize="17sp"
+       	android:gravity="center"
+        android:background="@drawable/btn_dialog_ok1"
+        android:onClick="onOkNewVersion"
+        android:text="升级" />
+    
+   	
+</RelativeLayout>
+</RelativeLayout>

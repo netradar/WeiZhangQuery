@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar" >
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/title_btn_back"
+            android:onClick="onCancelNewWeibo"
+            android:text="取消"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/newweibo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="发布新帖"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+           	android:layout_alignParentRight="true"
+           	android:layout_marginRight="5dp"
+           	android:gravity="center"
+           	android:layout_centerVertical="true"
+            android:background="@drawable/btn_style_blue"
+            android:onClick="onSendNewWeibo"
+            android:text="发送"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+       
+    </RelativeLayout>
+  <LinearLayout
+        android:id="@+id/linearLayout_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout10"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        
+        android:orientation="vertical"
+        android:background="@drawable/newweibo_backgrounds" > 
+ 
+    <EditText
+        android:id="@+id/weibo_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        
+        android:maxLines="10"
+        android:minLines="2"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="写点什么吧..."
+        android:inputType="textMultiLine"
+        android:maxLength="300"
+        android:textColor="#444"
+        android:textSize="17sp" >
+
+        <requestFocus />
+    </EditText>
+  
+ 	   <TextView
+	        android:id="@+id/newweibo_words_count"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	       	android:layout_gravity="right"
+	       	android:gravity="right"
+	        android:text="0/300"
+	        android:textColor="#666"
+	        android:textSize="15sp" /> 
+	        
+    <LinearLayout
+        android:id="@+id/add_pic_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/weibo_content"
+       
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/addImage_layout1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left|bottom" >
+
+                <ImageView
+                    android:id="@+id/addImage1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onAddPic"
+                   
+                    android:src="@drawable/pic_add_btn" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/deleteImage1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|top"
+                android:onClick="onDeletePic"
+                android:src="@drawable/delete_pic" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/addImage_layout2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left|bottom" >
+
+                <ImageView
+                    android:id="@+id/addImage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onAddPic"
+                   
+                    android:src="@drawable/pic_add_btn" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/deleteImage2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|top"
+                android:onClick="onDeletePic"
+                android:src="@drawable/delete_pic" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/addImage_layout3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left|bottom" >
+
+                <ImageView
+                    android:id="@+id/addImage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onAddPic"
+                    
+                    android:src="@drawable/pic_add_btn" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/deleteImage3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|top"
+                android:onClick="onDeletePic"
+                android:src="@drawable/delete_pic" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/addImage_layout4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left|bottom" >
+
+                <ImageView
+                    android:id="@+id/addImage4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onAddPic"
+                    
+                    android:src="@drawable/pic_add_btn" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/deleteImage4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|top"
+                android:onClick="onDeletePic"
+                android:src="@drawable/delete_pic" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_pic_layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/weibo_content"
+        
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/addImage_layout5"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left|bottom" >
+
+                <ImageView
+                    android:id="@+id/addImage5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onAddPic"
+                  
+                    android:src="@drawable/pic_add_btn" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/deleteImage5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|top"
+                android:onClick="onDeletePic"
+                android:src="@drawable/delete_pic" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/addImage_layout6"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left|bottom" >
+
+                <ImageView
+                    android:id="@+id/addImage6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onAddPic"
+                   
+                    android:src="@drawable/pic_add_btn" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/deleteImage6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|top"
+                android:onClick="onDeletePic"
+                android:src="@drawable/delete_pic" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/addImage_layout7"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left|bottom" >
+
+                <ImageView
+                    android:id="@+id/addImage7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onAddPic"
+                  
+                    android:src="@drawable/pic_add_btn" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/deleteImage7"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|top"
+                android:onClick="onDeletePic"
+                android:src="@drawable/delete_pic" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/addImage_layout8"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left|bottom" >
+
+                <ImageView
+                    android:id="@+id/addImage8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onAddPic"
+                
+                    android:src="@drawable/pic_add_btn" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/deleteImage8"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|top"
+                android:onClick="onDeletePic"
+                android:src="@drawable/delete_pic" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_pic_layout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/weibo_content"
+        
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/addImage_layout9"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left|bottom" >
+
+                <ImageView
+                    android:id="@+id/addImage9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onAddPic"
+                  
+                    android:src="@drawable/pic_add_btn" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/deleteImage9"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|top"
+                android:onClick="onDeletePic"
+                android:src="@drawable/delete_pic" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
+   <LinearLayout
+        android:id="@+id/linearLayout_option"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        
+        android:orientation="vertical"
+        android:background="@drawable/newweibo_backgrounds" > 
+		    <LinearLayout
+		        android:id="@+id/linearLayout_sametime"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="5dp"
+		       	android:visibility="gone"
+		        
+		        android:gravity="center|left"
+		        android:orientation="horizontal" >
+		
+		        <TextView
+		            android:id="@+id/share_sametime"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		           	
+		            android:text="同时发送到："
+		            android:textColor="#555"
+		            android:textSize="17sp" />
+		         <ImageView
+			        android:id="@+id/tencent_imageview"
+			        android:layout_width="25dp"
+			        android:layout_height="25dp"
+			       
+			        android:layout_marginLeft="10dp"
+			        android:clickable="true"
+			       	android:onClick="onSameToTencent"
+			        android:src="@drawable/icon_tencent_weibo_black" />
+		         
+		          <ImageView
+			        android:id="@+id/sina_imageview"
+			        android:layout_width="25dp"
+			        android:layout_height="25dp"
+			       	android:clickable="true"
+			       	android:onClick="onSameToSina"
+			        android:layout_marginLeft="30dp"
+			      
+			        android:src="@drawable/more_weibo_black" />
+		    </LinearLayout>
+		
+		      <LinearLayout
+		        android:id="@+id/linearLayout1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        
+		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="5dp"
+		        android:gravity="center|left"
+		        android:orientation="horizontal" >
+		
+		        <TextView
+		            android:id="@+id/share_sametime"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		           	
+		            android:text="帖子类型："
+		            android:textColor="#555"
+		            android:textSize="17sp" />
+		         <ImageView
+			        android:id="@+id/normal_weibo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			       	android:clickable="true"
+			       	android:onClick="onNormalWeibo"
+			        android:layout_marginLeft="10dp"
+			        
+			        android:src="@drawable/icon_grey" />
+		          <TextView
+		            
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		           	android:clickable="true"
+			       	android:onClick="onNormalWeibo"
+		            android:text="普通"
+		            android:textColor="#999"
+		            android:textSize="15sp" />
+		         
+		         <ImageView
+			        android:id="@+id/midum_weibo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			       
+			        android:layout_marginLeft="10dp"
+			        android:clickable="true"
+			       	android:onClick="onMidumWeibo"
+			        android:src="@drawable/icon_grey" />
+		          <TextView
+		            
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		           	android:clickable="true"
+			       	android:onClick="onMidumWeibo"
+		            android:text="高亮"
+		            android:textColor="#999"
+		            android:textSize="15sp" />
+		          <ImageView
+			        android:id="@+id/high_weibo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			       	android:clickable="true"
+			       	android:onClick="onHighWeibo"
+			        android:layout_marginLeft="10dp"
+			        
+			        android:src="@drawable/icon_grey" />
+		          <TextView
+		            
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		           	android:clickable="true"
+			       	android:onClick="onHighWeibo"
+		            android:text="置顶"
+		            android:textColor="#999"
+		            android:textSize="15sp" />
+		    </LinearLayout>
+	</LinearLayout>
+ 	
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#000"
+     	android:gravity="center"
+		 >
+
+            
+    <carweibo.netradar.lichao.ZoomImageView
+         android:id="@+id/gallery_item_imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+      
+	     
+      	android:scaleType="matrix"
+
+         />
+        
+    <ImageView
+        android:id="@+id/gallery_item_failuer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    
+        
+        android:layout_centerInParent="true"
+       	android:src="@drawable/preview_image_failure"
+       	android:visibility="gone"
+         />
+  
+
+    <TextView
+        android:id="@+id/gallery_item_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    
+        
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:text=""
+         />
+
+
+
+	</RelativeLayout>
+
+

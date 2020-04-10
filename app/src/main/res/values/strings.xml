@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WeizhangQuery</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">"Hello world!"</string>
+    <string name="add_vender">发布</string>
+    <string name="back">返回</string>
+    <string name="vender_list_title">商户点评</string>
+    <string name="vender_detail">商户详情</string>
+    <string name="vender_name">商户名称</string>
+    <string name="vender_name_m">名称：</string>
+    <string name="vender_addr">商户地址</string>
+    <string name="vender_addr_m">地址：</string>
+    <string name="vender_comment_m">评价：</string>
+    <string name="vender_pic">商户图片</string>
+    <string name="vender_pic_m">图片：</string>
+    <string name="vender_description">您的评价</string>
+    <string name="hundred_count">0/100</string>
+    <string name="cancel">取消</string>
+    <string name="new_vender">新商户</string>
+    <string name="image_content">img</string>
+    <string name="carcircle">车友圈</string>
+    <string name="good_comment">好评</string>
+    <string name="bad_comment">差评</string>
+    <string name="share">分享</string>
+    <string name="car_circle">车友论坛</string>
+    <string name="vender_recommend">商户点评</string>
+    <string name="near">附近</string>
+    <string name="app_recommend">热门应用</string>
+    <string name="friend_recommend">邀请好友</string>
+    <string name="game">游戏</string>
+	<string name="first_vender_info">大家可以在“商户口碑”里，把自已去过的吃喝玩乐、避暑纳凉、修车美容、购物理财等等，所有跟生活相关的商户的评价发布出来，好的差得都行，让广大车友能吸取互相的经验，更好的选择消费去处，抵制不良商家，降低我们花冤枉钱的可能。</string>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	   
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"
+	     android:background="#eee"
+	     android:orientation="horizontal"
+	     android:baselineAligned="false"
+	     android:gravity="bottom"
+       >
+ <LinearLayout
+	     
+	     android:layout_width="fill_parent"
+	     android:layout_height="40dp"
+	     android:background="@drawable/statusdetail_comment_top_background"
+	     android:orientation="horizontal"
+	     android:baselineAligned="false">
+	    <!-- <RelativeLayout
+           
+		     android:layout_width="fill_parent"
+		     android:layout_height="fill_parent"
+		     android:layout_weight="1"
+			 android:clickable="true"		    	
+		     android:onClick="onClickRetweet"
+      		 >
+		    <TextView
+				android:id="@+id/weibo_detail_retweet"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				
+				android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true"
+				android:text="分享"
+				android:textSize="16dp"
+				android:textColor="#929292"/>
+		    <ImageView
+	         	    
+         	    android:id="@+id/weibo_detail_retweet_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/statusdetail_comment_top_arrow"
+                android:visibility="gone"
+                    />
+		</RelativeLayout> -->
+		 <RelativeLayout
+           
+		     android:layout_width="wrap_content"
+		     android:layout_height="fill_parent"
+		     android:layout_marginLeft="15dp"
+		  	
+      		 >
+		    <TextView
+				android:id="@+id/weibo_detail_comment"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				
+				android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true"
+				android:text="评论"
+				android:textSize="16dp"
+				android:textColor="#222"/>
+		     <ImageView
+	         	    
+         	    android:id="@+id/weibo_detail_comment_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/statusdetail_comment_top_arrow"
+                    
+                    />
+		</RelativeLayout>
+		<!--  <RelativeLayout
+           
+		     android:layout_width="fill_parent"
+		     android:layout_height="fill_parent"
+		     android:layout_weight="1"
+		     android:clickable="true"		    	
+		     android:onClick="onClickGood"
+      		 >
+		    <TextView
+				android:id="@+id/weibo_detail_good"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				
+				android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true"
+				
+				
+				android:text="赞"
+				android:textSize="16dp"
+				android:textColor="#929292"/>
+		     <ImageView
+	         	    
+         	    android:id="@+id/weibo_detail_good_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/statusdetail_comment_top_arrow"
+                android:visibility="gone"    
+                    />
+	    </RelativeLayout> -->
+	
+     </LinearLayout>
+ </LinearLayout>  

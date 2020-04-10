@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#aaa"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar" >
+
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/carcircle"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+             />
+	  
+   
+    </RelativeLayout>
+    
+ <LinearLayout 
+   
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+ 	
+ 	android:gravity="center"
+ 	android:layout_marginTop="40dp"
+ 	android:baselineAligned="false"
+    android:orientation="horizontal" >     
+  
+      <LinearLayout 
+	   
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	 	android:gravity="center_horizontal"
+	 	
+	 	android:layout_weight="1"
+	    android:orientation="vertical" >      
+	    <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             
+                android:background="@null" >
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+          
+              android:gravity="bottom"
+              android:paddingTop="6dp" 
+              android:paddingRight="6dp" >
+          <carweibo.netradar.lichao.RoundImageView
+               android:id="@+id/weixinfriend"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+             
+               android:clickable="true"
+               android:scaleType="fitXY"
+               android:onClick="onCarcircle"
+               android:src="@drawable/test0_sel" />
+		</LinearLayout>
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              
+              android:gravity="top|right"
+               >
+
+              <TextView
+                  android:id="@+id/timeline_unread_weibo"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/tab_unread_bg"
+                  android:gravity="center"
+                  
+                  android:textColor="@android:color/white"
+                  android:textSize="10sp" />
+          </LinearLayout>
+ 
+        </FrameLayout>
+		 <TextView
+                android:id="@+id/text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+             
+    		   android:layout_marginTop="5dp"
+				android:gravity="center"
+               
+              android:paddingRight="6dp"
+                android:textColor="#333"
+                android:textSize="13sp"
+                android:text="@string/car_circle" />
+	</LinearLayout>
+	 <LinearLayout 
+	   
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	 	android:gravity="center_horizontal"
+	 	
+	 	android:layout_weight="1"
+	    android:orientation="vertical" >      
+	    <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             
+                android:background="@null" >
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+          
+              android:gravity="bottom"
+              android:paddingTop="6dp" 
+              android:paddingRight="6dp" >
+          <carweibo.netradar.lichao.RoundImageView
+              
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+             
+               android:clickable="true"
+               android:scaleType="fitXY"
+               android:onClick="onVenderList"
+               
+               android:src="@drawable/vender_sel" />
+		</LinearLayout>
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              
+              android:gravity="top|right"
+               >
+
+              <TextView
+                  android:id="@+id/timeline_unread_vender"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/tab_unread_bg"
+                  android:gravity="center"
+                  
+                  android:textColor="@android:color/white"
+                  android:textSize="10sp" />
+          </LinearLayout>
+ 
+        </FrameLayout>
+		 <TextView
+              
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+             
+    		   android:layout_marginTop="5dp"
+				android:gravity="center"
+               
+              android:paddingRight="6dp"
+                android:textColor="#333"
+                android:textSize="13sp"
+                android:text="@string/vender_recommend" />
+	</LinearLayout>
+	<!-- <LinearLayout 
+	   	
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	 	android:gravity="center_horizontal"
+	 	
+	 	android:layout_weight="1"
+	 	android:visibility="gone"
+	    android:orientation="vertical" >       
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             
+                android:background="@null" >
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+          
+              android:gravity="bottom"
+              android:paddingTop="6dp" 
+              android:paddingRight="6dp" >
+          <carweibo.netradar.lichao.RoundImageView
+             
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+             
+               android:clickable="true"
+               android:scaleType="fitXY"
+               android:onClick="onAudioLukuang"
+               android:src="@drawable/test1_sel" />
+		</LinearLayout>
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              
+              android:gravity="top|right"
+               >
+
+              <TextView
+                  android:id="@+id/timeline_unread_audio_lukuang"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/tab_unread_bg"
+                  android:gravity="center"
+                 
+                  android:textColor="@android:color/white"
+                  android:textSize="10sp" />
+          </LinearLayout>
+ 
+        </FrameLayout>
+       
+           <TextView
+             
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+            	 android:layout_marginTop="5dp"
+				android:gravity="center_horizontal"
+               
+              android:paddingRight="6dp"
+                android:textColor="#333"
+                android:textSize="13sp"
+                android:text="语音聊天室" />
+	</LinearLayout>            -->
+	<LinearLayout 
+	  
+	    android:layout_width="0dp"
+	    android:layout_height="fill_parent"
+	 	android:gravity="center_horizontal"
+	 	
+		android:layout_weight="1"
+	    android:orientation="vertical" >       
+          
+       	    <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             
+                android:background="@null" >
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+          
+              android:gravity="bottom|center"
+              android:paddingTop="6dp" 
+              android:paddingRight="6dp" >
+          <carweibo.netradar.lichao.RoundImageView
+              
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+             
+               android:clickable="true"
+               android:scaleType="fitXY"
+               android:onClick="onNear"
+               android:src="@drawable/test2_sel" />
+		</LinearLayout>
+        
+
+ 
+        </FrameLayout>
+         
+           <TextView
+              
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+          	   android:layout_marginTop="5dp"
+				android:gravity="bottom"
+               
+              android:paddingRight="6dp"
+                android:textColor="#333"
+                android:textSize="13sp"
+                android:text="@string/near" />
+	</LinearLayout>           
+
+</LinearLayout>
+    
+
+ <LinearLayout 
+   
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+ 	android:baselineAligned="false"
+ 	android:gravity="center"
+ 	android:layout_marginTop="40dp"
+    android:orientation="horizontal" >     
+     
+      <LinearLayout 
+	   
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	 	android:gravity="center_horizontal"
+	 	
+	 	android:layout_weight="1"
+	    android:orientation="vertical" >      
+	    <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             
+                android:background="@null" >
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+          
+              android:gravity="bottom"
+              android:paddingTop="6dp" 
+              android:paddingRight="6dp" >
+          <carweibo.netradar.lichao.RoundImageView
+               
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+             
+               android:clickable="true"
+               android:scaleType="fitXY"
+               android:onClick="onRecommend"
+               android:src="@drawable/test3_sel" />
+		</LinearLayout>
+
+
+ 
+        </FrameLayout>
+		 <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             
+    		   android:layout_marginTop="5dp"
+				android:gravity="center_horizontal"
+               
+              android:paddingRight="6dp"
+                android:textColor="#000"
+                android:textSize="13sp"
+                android:text="@string/app_recommend" />
+	</LinearLayout>
+
+   
+	<LinearLayout 
+	   	
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	 	android:gravity="center_horizontal"
+	 	
+	 	android:layout_weight="1"
+	 	
+	    android:orientation="vertical" >       
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             
+                android:background="@null" >
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+          
+              android:gravity="bottom"
+              android:paddingTop="6dp" 
+              android:paddingRight="6dp" >
+          <carweibo.netradar.lichao.RoundImageView
+             
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+             
+               android:clickable="true"
+               android:scaleType="fitXY"
+               android:onClick="onShare"
+               android:src="@drawable/test4_sel" />
+		</LinearLayout>
+
+
+             
+     
+ 
+        </FrameLayout>
+       
+           <TextView
+             
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+            	 android:layout_marginTop="5dp"
+				android:gravity="center_horizontal"
+               
+              android:paddingRight="6dp"
+                android:textColor="#000"
+                android:textSize="13sp"
+                android:text="@string/friend_recommend" />
+	</LinearLayout>           
+	 <LinearLayout 
+	   
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	 	android:gravity="center_horizontal"
+	 	
+	 	android:layout_weight="1"
+	    android:orientation="vertical" >      
+	    <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             
+                android:background="@null" >
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+          
+              android:gravity="bottom"
+              android:paddingTop="6dp" 
+              android:paddingRight="6dp" >
+          <carweibo.netradar.lichao.RoundImageView
+              
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+             
+               android:clickable="true"
+               android:scaleType="fitXY"
+               android:onClick="onGame"
+               
+               android:src="@drawable/game_sel" />
+		</LinearLayout>
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:visibility="gone"
+              android:gravity="top|right"
+               >
+
+              <TextView
+                
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/tab_unread_bg"
+                  android:gravity="center"
+                  
+                  android:textColor="@android:color/white"
+                  android:textSize="10sp" />
+          </LinearLayout>
+ 
+        </FrameLayout>
+		 <TextView
+              
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+            
+    		   android:layout_marginTop="5dp"
+				android:gravity="center"
+               
+              android:paddingRight="6dp"
+                android:textColor="#333"
+                android:textSize="13sp"
+                android:text="@string/game"
+                />
+	</LinearLayout>
+
+</LinearLayout>
+    
+         
+
+   
+</LinearLayout>

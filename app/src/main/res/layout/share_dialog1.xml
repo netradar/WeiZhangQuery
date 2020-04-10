@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/share_dialog"
+    android:layout_width="fill_parent"
+    android:layout_height="300dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+ 	android:gravity="center_horizontal"
+    android:background="@drawable/confirm_dialog_bg2"
+    android:orientation="vertical" >
+  <RelativeLayout 
+   android:id="@+id/share_dialog_hint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+ 	android:gravity="center_horizontal"
+ 	android:layout_marginTop="25dp"
+    android:layout_marginLeft="10dp"
+   	android:layout_marginRight="10dp"
+    android:orientation="horizontal" >  
+            <TextView
+                android:id="@+id/textViewXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+				
+               
+              
+                android:textColor="#2E8B57"
+                android:textSize="18sp"
+                android:text="分享到:" />
+</RelativeLayout>
+  <LinearLayout 
+   
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+ 	android:layout_below="@+id/share_dialog_hint"
+ 	android:gravity="left"
+ 	android:layout_marginTop="40dp"
+    android:orientation="horizontal" >     
+     
+      <LinearLayout 
+	   
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	 	android:gravity="center_horizontal"
+	 	
+	 	android:layout_weight="1"
+	    android:orientation="vertical" >      
+          <ImageView
+               android:id="@+id/weixinfriend"
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:gravity="center_horizontal"
+               android:clickable="true"
+               android:scaleType="fitXY"
+               android:onClick="onSinaWeibo"
+               android:src="@drawable/btn_weibo_sel" />   
+		 <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             
+    		   android:layout_marginTop="5dp"
+				android:gravity="center_horizontal"
+               
+              
+                android:textColor="#000"
+                android:textSize="13sp"
+                android:text="新浪微博" />
+	</LinearLayout>
+
+	<LinearLayout 
+	   	android:id="@+id/weixint"
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	 	android:gravity="center_horizontal"
+	 	
+	 	android:layout_weight="1"
+	 	
+	    android:orientation="vertical" >       
+          <ImageView
+               android:id="@+id/weixintimeline"
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+				android:clickable="true"
+			   android:onClick="onFriend"
+              android:scaleType="fitXY"
+               android:src="@drawable/btn_friend_sel" />
+           <TextView
+             
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+            	 android:layout_marginTop="5dp"
+				android:gravity="center_horizontal"
+               
+              
+                android:textColor="#000"
+                android:textSize="13sp"
+                android:text="朋友圈" />
+	</LinearLayout>           
+	<LinearLayout 
+	  
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	 	android:gravity="center_horizontal"
+	 	
+		 android:layout_weight="1"
+	    android:orientation="vertical" >       
+          <ImageView
+              
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+				android:clickable="true"
+			   android:onClick="onFriend1"
+              android:scaleType="fitXY"
+               android:src="@drawable/btn_weixin_sel" />
+           <TextView
+              
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+          	   android:layout_marginTop="5dp"
+				android:gravity="center_horizontal"
+               
+              
+                android:textColor="#000"
+                android:textSize="13sp"
+                android:text="微信" />
+	</LinearLayout>           
+	<LinearLayout 
+	   	android:id="@+id/weibo"
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	 	android:gravity="center_horizontal"
+		 android:layout_weight="1"
+		
+	    android:orientation="vertical" >  
+          <ImageView
+               android:id="@+id/icon_lanuch1"
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:clickable="true"
+               android:onClick="onCarWeiBo"
+			   android:scaleType="fitXY"
+               
+               android:src="@drawable/icon_lanuch1" />
+           <TextView
+               
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+            	android:layout_marginTop="5dp"
+				android:gravity="center_horizontal"
+               
+              
+                android:textColor="#000"
+                android:textSize="13sp"
+                android:text="论坛" />
+	</LinearLayout>
+</LinearLayout>
+
+    <RelativeLayout 
+   
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+ 	android:gravity="center_horizontal"
+ 	android:layout_alignParentBottom="true"
+ 	android:layout_marginBottom="10dp"
+    android:orientation="horizontal" > 
+    <TextView
+        android:id="@+id/dialog_cancel"
+        android:layout_width="240dp"
+        android:layout_height="38dp"
+      	
+       
+
+        android:textColor="#000"
+        android:clickable="true"
+       android:textSize="17sp"
+       	android:gravity="center"
+        android:background="@drawable/btn_dialog_cancel"
+        android:onClick="onCancelShareDetail1"
+        android:text="取消" />
+    
+    
+   	
+</RelativeLayout>
+</RelativeLayout>

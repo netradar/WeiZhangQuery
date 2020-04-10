@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="60dp"
+  android:minHeight="50dp"
+  
+  android:layout_marginTop="5dp"
+  android:background="@null"
+  
+ >
+ 
+   <FrameLayout
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:layout_gravity="center"
+ 
+  >   
+  <LinearLayout
+		android:id="@+id/getting_info"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:background="@drawable/comment_detail_bottom_sel"
+		android:visibility="gone"
+	
+  >   
+	   <ProgressBar
+		  android:layout_width="wrap_content"
+		  android:layout_height="wrap_content"
+		  style="?android:attr/progressBarStyleSmall"
+		  android:layout_gravity="center"
+		  android:id="@+id/foot_progressBar"
+		  
+		  
+	  />
+	    <TextView
+	       
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			android:layout_marginLeft="6dp"
+	        android:textColor="#222"
+	        android:textSize="15sp"
+	        android:layout_gravity="center"
+	        android:text="正在获取。。。" />
+    
+  </LinearLayout>
+   <Button
+        android:id="@+id/moreinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+		android:background="@drawable/comment_detail_bottom_sel"
+		android:layout_gravity="center"
+       	android:gravity="center"
+        android:textColor="#222"
+       	android:onClick="onGetMoreComment"
+        android:text="获取更多。。。" />
+    <TextView
+	       
+	       android:id="@+id/comment_detail_foot_tip"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	       android:background="@drawable/comment_detail_bottom_sel"
+			android:gravity="center"
+	        android:textColor="#222"
+	        android:textSize="15sp"
+	        android:layout_gravity="center"
+	        />
+  </FrameLayout>
+</LinearLayout>

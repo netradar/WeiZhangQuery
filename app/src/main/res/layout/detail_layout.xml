@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#eee"
+        android:orientation="vertical" >
+        
+    <RelativeLayout
+        android:id="@+id/detailtitlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar" >
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/title_btn_back"
+            android:onClick="onCancelDetail"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/detail_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:clickable="true"
+          
+            
+            />
+
+        <Button
+            
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/title_btn_right"
+            android:onClick="onShareDetail"
+            android:text="分享违章"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+    
+<RelativeLayout
+        android:id="@+id/summory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/detail_item_background" >
+	
+        <TextView
+            android:id="@+id/detail_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="10dp"
+          
+            
+            android:textColor="#8B4513"
+            android:textSize="16sp"
+             />
+
+
+   
+    </RelativeLayout>   
+
+    <FrameLayout
+        android:id="@+id/_detail_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eee" >
+        <ListView
+        android:id="@+id/detail_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:focusable="false"
+		android:focusableInTouchMode="false"
+		android:clickable="false"
+        android:layout_marginTop="1dp"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:divider="#000">
+   		 </ListView>
+   		 
+        <RelativeLayout 
+            android:id="@+id/noweizhang_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+
+                android:src="@drawable/h_good" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:layout_toRightOf="@+id/imageView1"
+                android:layout_alignBottom="@+id/imageView1"
+               	android:layout_marginLeft="5dp"
+                android:textColor="#2E8B57"
+                android:textSize="16sp"
+                android:text="你很牛，没有违章，继续保持～" />
+            
+        </RelativeLayout>
+   	
+    </FrameLayout>
+    
+
+
+      
+	
+</LinearLayout>

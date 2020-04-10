@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#eee"
+        android:orientation="vertical" >
+        
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar" >
+
+        <TextView
+            android:id="@+id/carinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="更多功能"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            />
+
+   
+    </RelativeLayout>
+    
+<ScrollView 
+    		android:layout_width="fill_parent"
+    		android:layout_height="fill_parent"
+    		android:scrollbarStyle="outsideOverlay" 
+    		 >
+        	<LinearLayout
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:orientation="vertical" 
+            	>
+            	<RelativeLayout
+            			android:layout_width="fill_parent"
+            			android:layout_height="wrap_content"
+            			android:layout_marginTop="14dp"
+            			android:gravity="center_vertical"
+            			
+            			android:clickable="true"
+            			android:onClick="onMyMessage"
+            			android:background="@drawable/preference_first_item" >
+            			<ImageView
+            			    android:id="@+id/myinfo_img"
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentLeft="true"
+        					android:layout_marginLeft="8dp"
+        					android:src="@drawable/info" /> 
+            			<TextView
+            			     android:id="@+id/myinfo_txt"
+        					android:layout_width="wrap_content" 
+        					android:layout_height="wrap_content"
+        					android:layout_toRightOf="@+id/myinfo_img"
+        					android:padding="8dp" 
+        					android:text="我的私信"
+        					android:textSize="17sp"		
+							android:textColor="#000" />
+            			
+	            			
+	            			
+            			<TextView
+            			    android:id="@+id/more_msg_unread_tip"
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"     
+        					android:layout_toRightOf="@+id/myinfo_txt"   	  
+        					android:layout_marginLeft="5dp"
+        					android:layout_centerVertical="true"
+        					android:background="@drawable/tab_unread_bg"
+                     		android:gravity="center"
+                      	  	android:text="45"
+        					
+        					android:textColor="@android:color/white"
+                       		android:textSize="10sp"
+                        	android:visibility="gone"
+        					
+        					
+        					 />      
+        			<ImageView
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentRight="true"
+        					android:src="@drawable/mm_submenu" />					
+      				</RelativeLayout>
+      			<RelativeLayout
+            			android:layout_width="fill_parent"
+            			android:layout_height="wrap_content"
+            			android:gravity="center_vertical"
+            			android:clickable="true"
+            			android:onClick="onMyWeibo"
+            			android:background="@drawable/preference_item" >
+						<ImageView
+            			    android:id="@+id/newversion"
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentLeft="true"
+        					android:layout_marginLeft="8dp"
+        					android:src="@drawable/myweibo" /> 
+            			<TextView
+        					android:layout_width="wrap_content" 
+        					android:layout_height="wrap_content"
+        					android:padding="8dp" 
+        					android:layout_toRightOf="@+id/newversion"
+        					android:text="我的帖子"
+        					android:textSize="17sp"		
+							android:textColor="#000" />      
+						<ImageView
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentRight="true"
+        					android:src="@drawable/mm_submenu" /> 					
+      				</RelativeLayout>
+      				<RelativeLayout
+            			android:layout_width="fill_parent"
+            			android:layout_height="wrap_content"
+            			android:gravity="center_vertical"
+            			android:clickable="true"
+            			android:onClick="onDraft"
+            			android:background="@drawable/preference_item" >
+						<ImageView
+            			    android:id="@+id/newversion"
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentLeft="true"
+        					android:layout_marginLeft="8dp"
+        					android:src="@drawable/newweibo_pressed" /> 
+            			<TextView
+        					android:layout_width="wrap_content" 
+        					android:layout_height="wrap_content"
+        					android:padding="8dp" 
+        					android:layout_toRightOf="@+id/newversion"
+        					android:text="草稿箱"
+        					android:textSize="17sp"		
+							android:textColor="#000" />      
+						<ImageView
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentRight="true"
+        					android:src="@drawable/mm_submenu" /> 					
+      				</RelativeLayout>
+            		<RelativeLayout
+            			android:layout_width="fill_parent"
+            			android:layout_height="wrap_content"
+            			
+            			android:gravity="center_vertical"
+            			
+            			android:clickable="true"
+            			android:onClick="onMyAccount"
+            			android:background="@drawable/preference_last_item" >
+            			<ImageView
+            			    android:id="@+id/myscore"
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentLeft="true"
+        					android:layout_marginLeft="8dp"
+        					android:src="@drawable/myscore" /> 
+            			<TextView
+        					android:layout_width="wrap_content" 
+        					android:layout_height="wrap_content"
+        					android:layout_toRightOf="@+id/myscore"
+        					android:padding="8dp" 
+        					android:text="我的帐号"
+        					android:textSize="17sp"		
+							android:textColor="#000" />
+            			<TextView
+            			    android:id="@+id/mysaccount"
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					
+        					
+        					android:layout_alignParentRight="true"
+        					android:layout_marginRight="10dp"
+        					android:textColor="#555"
+        					 />      					
+        					 <ImageView
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentRight="true"
+        					android:src="@drawable/mm_submenu" />					
+      				</RelativeLayout>
+      				
+      				
+
+      					
+      			
+      				<RelativeLayout
+            			android:layout_width="fill_parent"
+            			android:layout_height="wrap_content"
+            			android:gravity="center_vertical"
+            			android:clickable="true"
+            			android:onClick="updateVer"
+            			android:layout_marginTop="20dp"
+            			android:background="@drawable/preference_first_item" >
+						<ImageView
+            			    android:id="@+id/newversion"
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentLeft="true"
+        					android:layout_marginLeft="8dp"
+        					android:src="@drawable/newversion" /> 
+            			<TextView
+        					android:layout_width="wrap_content" 
+        					android:layout_height="wrap_content"
+        					android:padding="8dp" 
+        					android:layout_toRightOf="@+id/newversion"
+        					android:text="新版本检测"
+        					android:textSize="17sp"		
+							android:textColor="#000" />      
+						<ImageView
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentRight="true"
+        					android:src="@drawable/mm_submenu" /> 					
+      				</RelativeLayout>
+      				<RelativeLayout
+            			android:layout_width="fill_parent"
+            			android:layout_height="wrap_content"
+            			android:gravity="center_vertical"
+            			android:clickable="true"
+            			android:onClick="onAbout"
+            			android:background="@drawable/preference_last_item" >
+						<ImageView
+            			    android:id="@+id/about"
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentLeft="true"
+        					android:layout_marginLeft="8dp"
+        					android:src="@drawable/about" /> 
+            			<TextView
+        					android:layout_width="wrap_content" 
+        					android:layout_height="wrap_content"
+        					android:padding="8dp" 
+        					android:layout_toRightOf="@+id/about"
+        					android:text="关于本软件"
+        					android:textSize="17sp"		
+							android:textColor="#000" />      
+						<ImageView
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentRight="true"
+        					android:src="@drawable/mm_submenu" /> 					
+      				</RelativeLayout>		
+            		
+      				<Button 
+      				    android:layout_width="fill_parent" 
+        				android:layout_height="wrap_content"
+        				android:layout_marginTop="14dp"
+        				android:layout_marginBottom="14dp"
+        				android:layout_marginLeft="12dp"
+        				android:layout_marginRight="12dp"
+        				android:padding="4dp" 
+        				android:text="退出软件"
+        				android:textSize="18sp"		
+						android:textColor="#fff"
+						android:gravity="center"
+						android:background="@drawable/btn_style_red"
+						android:onClick="onExit"
+      				    />     	
+        	
+        	</LinearLayout>
+    </ScrollView>
+	
+</LinearLayout>

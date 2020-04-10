@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        
+        android:background="@drawable/title_bar" >
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/title_btn_back"
+            android:onClick="onCancelAdd"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/carinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="添加车辆信息"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/login_top_background" >
+
+        <TextView
+            android:id="@+id/carcata"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            
+            android:gravity="right"
+            android:text="车辆类型："
+           	android:textColor="#000"
+            android:textSize="17sp" />
+
+        <RadioGroup
+            android:id="@+id/car_catagory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          
+            android:layout_toRightOf="@+id/carcata"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+          	android:gravity="left"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_green"
+                android:checked="true"
+                android:text="小型车"
+                android:textSize="17sp"
+                android:textColor="#000" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_grey"
+                android:text="大型车"
+                android:textSize="17sp"
+                android:textColor="#000" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/login_middle_background" >
+
+        <TextView
+            android:id="@+id/carnum"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+           
+            android:layout_centerVertical="true"
+            android:gravity="right"
+           	android:textColor="#000"
+            android:text="车牌号："
+            
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/carnum_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/carnum"
+            android:background="@null"
+            android:hint="如：ALM888"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/login_bottom_background" >
+
+        <TextView
+            android:id="@+id/carowner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            
+            android:gravity="right"
+            android:text="所有人："
+           	android:textColor="#000"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/carOwner_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/carowner"
+            android:background="@null"
+            android:hint="车主或单位中文名称"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="17sp" />
+	</RelativeLayout>
+
+	<Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_query"
+        android:onClick="onAddQuery"
+        android:text="添加并查询"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+    
+    
+     <TextView
+            android:id="@+id/change_query_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+	        android:layout_marginLeft="25dp"
+	       	android:clickable="true"
+	       	android:onClick="onChangeQueryMethod"
+	        android:layout_marginRight="25dp"
+        	
+        	android:layout_marginTop="20dp"
+        	
+            android:text="所有人记不住？\n点这里用发动机号来查询吧。"
+            android:textColor="#00f"
+            android:textSize="13sp"
+            
+             />
+
+
+
+</LinearLayout>

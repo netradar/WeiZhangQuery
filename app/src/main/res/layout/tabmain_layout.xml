@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost android:id="@android:id/tabhost" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+       <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TabWidget android:id="@android:id/tabs" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0" />
+       
+         <LinearLayout
+            android:id="@+id/main_tab_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingTop="2.0dip" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@null" >
+
+            	<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom|center" >
+		            <RadioButton android:id="@+id/tab_weibo"  android:text="车友圈" android:drawableTop="@drawable/weibo" android:background="@drawable/button_sel" android:button="@null" style="@style/main_tab_bottom"/>"
+ 				</LinearLayout>
+ 				<LinearLayout
+ 				    
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="top|right|center"
+                    android:paddingRight="12dp" 
+                    android:layout_marginTop="1dp" >
+		            <TextView
+                        android:id="@+id/unread_weibo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_unread_bg"
+                        android:gravity="center"
+                        android:text="45"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+				</LinearLayout>
+				<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="top|right|center"
+                    android:paddingRight="12dp" 
+                    android:layout_marginTop="1dp" >
+		            <ImageView
+                        android:id="@+id/unread_weibo_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        
+                       	android:src="@drawable/newnotice"
+                        android:visibility="gone" />
+
+				</LinearLayout>
+ 			</FrameLayout>
+ 			 <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom|center" 
+                    android:layout_weight="1">
+          		  <RadioButton android:id="@+id/tab_query"  android:text="违章" android:drawableTop="@drawable/query" android:button="@null" android:background="@drawable/button_sel" style="@style/main_tab_bottom" />"
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom|center"
+                    android:layout_weight="1" >
+           			 <RadioButton android:id="@+id/tab_lukuang"  android:text="路况地图" android:drawableTop="@drawable/lukuang" android:background="@drawable/button_sel" android:button="@null" style="@style/main_tab_bottom"/>"
+ 			</LinearLayout>
+ 			
+       		 <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@null" >     
+		            <LinearLayout
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="fill_parent"
+		                    android:gravity="bottom|center" 
+		                    >
+		            		 <RadioButton android:id="@+id/tab_setting"  android:text="更多" android:drawableTop="@drawable/find" android:background="@drawable/button_sel" android:button="@null" style="@style/main_tab_bottom"/>"
+		  			</LinearLayout>
+		  			<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="top|right|center"
+                    android:paddingRight="12dp" 
+                    android:layout_marginTop="1dp" >
+		            <TextView
+                        android:id="@+id/unread_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_unread_bg"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+				</LinearLayout>
+				<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="top|right|center"
+                    android:paddingRight="12dp" 
+                    android:layout_marginTop="1dp" >
+		            <ImageView
+                        android:id="@+id/unread_msg_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        
+                       	android:src="@drawable/newnotice"
+                        android:visibility="gone" />
+
+				</LinearLayout>
+		  	</FrameLayout>
+  
+       </LinearLayout>
+     
+    </LinearLayout>
+  
+    
+
+</TabHost>

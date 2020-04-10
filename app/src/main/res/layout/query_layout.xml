@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar" >
+
+        <TextView
+            android:id="@+id/carinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="车库"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+             />
+	    <Button 
+			    android:layout_width="80dp" 
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentRight="true" 
+        		android:layout_centerVertical="true"
+        		android:layout_marginRight="5dp"
+        		android:text="添加"
+        		android:textColor="#fff"
+        		android:textSize="15sp"
+				android:background="@drawable/title_btn_right"
+				android:onClick="onNewCar"
+			    /> 
+   
+    </RelativeLayout>
+    
+    <LinearLayout
+        		android:id="@+id/query_car_manager_layout"
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:orientation="vertical" >
+			<RelativeLayout
+            			android:layout_width="fill_parent"
+            			android:layout_height="wrap_content"
+            			android:gravity="center_vertical"
+            			android:clickable="true"
+            			android:layout_marginTop="20dp"
+            			android:onClick="onCarInfo"
+            			android:background="@drawable/preference_first_item" >
+            			<ImageView
+            			    android:id="@+id/query_carinfo1"
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentLeft="true"
+        					android:layout_marginLeft="8dp"
+        					android:src="@drawable/carinfo" /> 
+            			<TextView
+        					android:layout_width="wrap_content" 
+        					android:layout_height="wrap_content"
+        					android:padding="8dp" 
+        					android:layout_toRightOf="@+id/query_carinfo1"
+        					android:text="车辆信息"
+        					android:textSize="17sp"		
+							android:textColor="#000" />      
+						<ImageView
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentRight="true"
+        					android:src="@drawable/mm_submenu" /> 					
+      				</RelativeLayout>
+      				<RelativeLayout
+            			android:layout_width="fill_parent"
+            			android:layout_height="wrap_content"
+            			android:gravity="center_vertical"
+            			android:clickable="true"
+            			android:onClick="onHistoryQuery"
+            			android:background="@drawable/preference_last_item" >
+						<ImageView
+            			    android:id="@+id/query_historyquery"
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentLeft="true"
+        					android:layout_marginLeft="8dp"
+        					android:src="@drawable/historyquery" /> 
+            			<TextView
+        					android:layout_width="wrap_content" 
+        					android:layout_height="wrap_content"
+        					android:padding="8dp" 
+        					android:layout_toRightOf="@+id/query_historyquery"
+        					android:text="历史查询记录"
+        					android:textSize="17sp"		
+							android:textColor="#000" />      
+						<ImageView
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentRight="true"
+        					android:src="@drawable/mm_submenu" /> 					
+      				</RelativeLayout>
+      	</LinearLayout>
+         <TextView
+        android:id="@+id/shuoming1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:text="点击进行查询，长按删除车辆"
+        android:textColor="#666666"
+        android:textSize="15sp" />
+    <ListView
+        android:id="@+id/carinfo_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:focusable="false"
+		android:focusableInTouchMode="false"
+		android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:layout_marginTop="1dp"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="0dp"
+        android:divider="#000">
+    </ListView>
+
+   
+</LinearLayout>

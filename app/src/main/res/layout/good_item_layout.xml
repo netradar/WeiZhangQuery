@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+     android:paddingBottom="5dp"
+   	android:background="#ffffff">
+    
+    <FrameLayout
+    	 android:id="@+id/good_item_touxiang_framelayout"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginTop="5dp">
+	    <carweibo.netradar.lichao.RoundImageView
+	        android:id="@+id/good_item_touxiang"
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:layout_gravity="left|top"
+	        android:src="@drawable/switchuser" />
+	     <ImageView
+	                android:id="@+id/good_item_vip_sign"
+	                android:layout_width="16dp"
+	                android:layout_height="16dp"
+	                android:layout_gravity="right|bottom"
+	                
+	                android:src="@drawable/avatar_vip" />
+ </FrameLayout>
+    	
+    	
+    	<TextView
+	        android:id="@+id/good_item_nickname"
+	        android:layout_width="200dp"
+	        android:layout_height="wrap_content"
+	     	
+	       	android:layout_marginLeft="10dp"
+	       	android:layout_toRightOf="@+id/good_item_touxiang_framelayout"
+	       
+	        android:textColor="#222"
+	        android:textSize="15sp"
+	         />
+     	
+
+   
+</RelativeLayout>

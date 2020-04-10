@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  	android:background="@drawable/my_msg_item_sel"
+    android:orientation="vertical"
+ 	
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  
+   	android:paddingTop="5dp"
+   	android:paddingBottom="5dp"
+    android:background="@null">
+    
+    	<ImageView
+    	    android:id="@+id/vender_item_icon"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentLeft="true"
+    	    android:layout_marginLeft="5dp"
+    	   
+    	    android:layout_centerVertical="true"
+    	    android:src="@drawable/navigationbar_home_highlighted" />
+    	
+    	<TextView
+        android:id="@+id/vender_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignParentTop="true"
+     	
+       	android:layout_marginLeft="10dp"
+       	android:layout_toRightOf="@+id/vender_item_icon"
+       	android:layout_toLeftOf="@+id/vender_item_comment_layout"
+       	android:layout_marginRight="15dp"
+       	
+    	
+        android:textColor="#333366"
+        android:textSize="17sp"
+         />
+    	<TextView
+        android:id="@+id/vender_item_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignLeft="@+id/vender_item_name"
+     	android:layout_below="@+id/vender_item_name"
+        android:layout_marginTop="3dp"
+       	android:layout_toLeftOf="@+id/vender_item_comment_layout"
+       	android:layout_marginRight="15dp"
+      
+        android:textColor="#555"
+        android:textSize="12sp"
+         />
+   
+    	<TextView
+        android:id="@+id/vender_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignLeft="@+id/vender_item_nickname"
+     	android:layout_below="@+id/vender_item_nickname"
+        android:layout_marginTop="1dp"
+       	android:layout_toLeftOf="@+id/vender_item_comment_layout"
+       	android:layout_marginRight="15dp"
+      
+        android:textColor="#555"
+        android:textSize="12sp"
+         />
+		
+    	<LinearLayout 
+    	    android:id="@+id/vender_item_comment_layout"
+    	    android:layout_width="wrap_content"
+       		android:layout_height="fill_parent"
+    	    android:layout_toLeftOf="@+id/vender_item_submiticon"
+    	    android:layout_centerVertical="true"
+    	    android:layout_marginRight="15dp"
+    	    android:orientation="vertical"
+    	    >
+    	    <TextView
+	        android:id="@+id/vender_item_good_comment"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	     	
+	      
+	        android:textColor="#006633"
+	        android:textSize="12sp"
+	         />
+    	    <TextView
+	        android:id="@+id/vender_item_bad_comment"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	     	android:layout_marginTop="2dp"
+	        android:textColor="#333333"
+	        android:textSize="12sp"
+	         />
+    	    
+    	</LinearLayout>
+
+
+    	<ImageView
+    	android:id="@+id/vender_item_submiticon"
+     	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"        	     	
+        android:scaleType="matrix"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:onClick="true"
+        android:src="@drawable/mm_submenu" />
+
+
+   
+</RelativeLayout>
+</LinearLayout>

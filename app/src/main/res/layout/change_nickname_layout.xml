@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout12"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar" >
+	<Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/title_btn_back"
+            android:onClick="onCancelChangeNickname"
+            android:text="取消"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+     
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="更改昵称"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+             />
+	  
+   
+    </RelativeLayout>
+    
+
+		   		 
+  <EditText
+        android:id="@+id/change_nickname_nickname"
+        android:layout_below="@+id/relativeLayout12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:textSize="15sp"
+        android:gravity="top"
+       	android:singleLine="true"
+       	android:maxLength="15"
+     
+        android:background="@drawable/carinfo_edit"/>
+  
+  <Button
+			        
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentRight="true"
+			         android:layout_marginLeft="10dp"
+       				android:layout_marginRight="10dp"
+			       
+			        android:layout_marginTop="10dp"
+			        android:background="@drawable/btn_login_sel"
+			        android:onClick="onChangeNickname"
+			        android:text="更改"
+			        android:textColor="#fff"
+			        android:textSize="18sp" />
+
+</LinearLayout>

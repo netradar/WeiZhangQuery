@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   	android:background="#ffffff">
+    
+    <FrameLayout
+    	 android:id="@+id/retweet_item_touxiang_framelayout"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginTop="5dp">
+	    <carweibo.netradar.lichao.RoundImageView
+	        android:id="@+id/retweet_item_touxiang"
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:layout_gravity="left|top"
+	        android:src="@drawable/switchuser" />
+	     <ImageView
+	                android:id="@+id/retweet_item_vip_sign"
+	                android:layout_width="16dp"
+	                android:layout_height="16dp"
+	                android:layout_gravity="right|bottom"
+	                
+	                android:src="@drawable/avatar_vip" />
+ </FrameLayout>
+    	
+    	
+    	<TextView
+	        android:id="@+id/retweet_item_nickname"
+	        android:layout_width="200dp"
+	        android:layout_height="wrap_content"
+	     	android:layout_alignTop="@+id/retweet_item_touxiang_framelayout"
+	       	android:layout_marginLeft="10dp"
+	       	android:layout_toRightOf="@+id/retweet_item_touxiang_framelayout"
+	       
+	        android:textColor="#222"
+	        android:textSize="15sp"
+	         />
+     	
+    <TextView
+        android:id="@+id/retweet_item_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/retweet_item_nickname"
+        android:layout_alignLeft="@+id/retweet_item_nickname"
+       	android:layout_marginTop="10dp"
+      	android:layout_marginRight="10dp"
+     	
+        android:textColor="#444"
+        android:textSize="14sp"/>
+	<TextView
+        android:id="@+id/retweet_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/retweet_item_content"
+        android:layout_alignLeft="@+id/retweet_item_content"
+       	android:layout_marginTop="10dp"
+      	android:textColor="#666"
+        android:textSize="12sp"/>
+
+  
+</RelativeLayout>
+</LinearLayout>

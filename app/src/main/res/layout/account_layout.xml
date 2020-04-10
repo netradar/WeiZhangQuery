@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myandroid="http://schemas.android.com/apk/res/carweibo.netradar.lichao"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        
+        android:background="@drawable/title_bar" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/title_btn_back"
+            android:onClick="onCancelAccount"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/carinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="我的帐号"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+             />
+
+      
+    </RelativeLayout>
+
+ 	<TextView
+            android:id="@+id/account_mycarweibo_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="车友圈帐号:"
+            android:textColor="#333"
+            android:textSize="18sp"
+             />
+
+      				
+	    <RelativeLayout
+	     			   android:id="@+id/relativelayout_user"
+            			android:layout_width="fill_parent"
+            			android:layout_height="40dp"
+            			android:gravity="center_vertical"
+            			android:clickable="true"
+            			android:onClick="onCarWeibo"
+            			android:layout_marginTop="10dp"
+            			android:background="@drawable/prefrence_single_item" >
+	    		
+					    
+					<!-- 	<carweibo.netradar.lichao.RoundImageView
+            			    android:id="@+id/CarWeibo_touxiang"
+            				android:layout_width="30dp"
+        					android:layout_height="30dp"   
+        					myandroid:roundWidth="0dp"
+        					myandroid:roundHeight="0dp"   	
+        				
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentLeft="true"
+        					android:layout_marginLeft="8dp"
+        					android:src="@drawable/icon_lanuch1" />  -->
+        					
+            			<TextView
+            			    android:id="@+id/CarWeibo_nickname"
+        					android:layout_width="100dp" 
+        					android:layout_height="wrap_content"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentLeft="true"
+        					android:layout_toLeftOf="@+id/CarWeibo_cur_icon"
+        					android:layout_marginRight="20dp"
+        					android:layout_marginLeft="5dp"
+        					android:singleLine="true"
+        					android:gravity="left"
+        					android:textSize="16sp"		
+							android:textColor="#333" />   
+						
+					<TextView
+						    android:id="@+id/CarWeibo_cur_icon"
+						    
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_toLeftOf="@+id/CarWeibo_bind"
+        					android:layout_marginRight="10dp"
+        					
+        					
+        					
+        					
+        					android:text="当前帐号"
+        					android:textSize="10sp"
+        					android:textColor="#fff"
+        					android:background="@drawable/cur_user_tip" />
+						<TextView
+						    android:id="@+id/CarWeibo_bind"
+        					android:layout_width="wrap_content" 
+        					android:layout_height="wrap_content"
+        					
+        					android:layout_centerVertical="true"
+        					android:layout_toLeftOf="@+id/CarWeibo_bind_subicon"
+        					android:layout_marginRight="8dp"
+        					android:text="未绑定"
+        					android:textSize="13sp"		
+							android:textColor="#333" />  
+						<ImageView
+						    android:id="@+id/CarWeibo_bind_subicon"
+						    android:layout_centerVertical="true"
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					
+        					android:layout_alignParentRight="true"
+        					android:src="@drawable/mm_submenu" /> 					
+      				</RelativeLayout> 
+
+	<TextView
+            android:id="@+id/account_mycarweibo_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="其它帐号:"
+            android:textColor="#333"
+            android:textSize="18sp"
+             />
+					<RelativeLayout
+            			android:layout_width="fill_parent"
+            			android:layout_height="40dp"
+            			android:gravity="center_vertical"
+            			android:clickable="true"
+            			android:onClick="onBindQQ"
+            			android:layout_marginTop="5dp"
+            			android:background="@drawable/preference_first_item" >
+	    		
+					    
+						<!-- <carweibo.netradar.lichao.RoundImageView
+            			    android:id="@+id/QQ_touxiang"
+            				android:layout_width="30dp"
+        					android:layout_height="30dp"   
+        					myandroid:roundWidth="0dp"
+        					myandroid:roundHeight="0dp"   	
+        				
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentLeft="true"
+        					android:layout_marginLeft="8dp"
+        					android:src="@drawable/qq_normal" />  -->
+        					
+            			<TextView
+            			    android:id="@+id/QQ_nickname"
+        					android:layout_width="wrap_content" 
+        					android:layout_height="wrap_content"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentLeft="true"
+        					android:layout_toLeftOf="@+id/QQ_cur_icon"
+        					android:layout_marginRight="10dp"
+        					android:layout_marginLeft="5dp"
+        					android:text="QQ帐号"
+        					android:textSize="16sp"		
+							android:textColor="#333" />   
+						
+					<TextView
+						    android:id="@+id/QQ_cur_icon"
+						    
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_toLeftOf="@+id/QQ_bind"
+        					android:layout_marginRight="10dp"
+        					
+        					
+        					
+        					
+        					android:text="当前帐号"
+        					android:textSize="10sp"
+        					android:textColor="#fff"
+        					android:background="@drawable/cur_user_tip" />
+						<TextView
+						    android:id="@+id/QQ_bind"
+        					android:layout_width="wrap_content" 
+        					android:layout_height="wrap_content"
+        					
+        					android:layout_centerVertical="true"
+        					android:layout_toLeftOf="@+id/QQ_bind_subicon"
+        					android:layout_marginRight="8dp"
+        					android:text="未绑定"
+        					android:textSize="13sp"		
+							android:textColor="#333" />    
+						<ImageView
+						    android:id="@+id/QQ_bind_subicon"
+						    android:layout_centerVertical="true"
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					
+        					android:layout_alignParentRight="true"
+        					android:src="@drawable/mm_submenu" /> 					
+      				</RelativeLayout> 
+      				
+      				<RelativeLayout
+            			android:layout_width="fill_parent"
+            			android:layout_height="40dp"
+            			android:gravity="center_vertical"
+            			android:clickable="true"
+            			android:onClick="onBindWeibo"
+            			
+            			android:background="@drawable/preference_last_item" >
+						<!-- <carweibo.netradar.lichao.RoundImageView
+            			    android:id="@+id/Weibo_touxiang"
+            				
+            				android:layout_width="30dp"
+        					android:layout_height="30dp"   
+        					myandroid:roundWidth="0dp"
+        					myandroid:roundHeight="0dp"     	     	
+        					
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentLeft="true"
+        					android:layout_marginLeft="8dp"
+        					android:src="@drawable/more_weibo" />  -->
+        			
+		            			<TextView
+		            			    android:id="@+id/Weibo_nickname"
+		        					android:layout_width="wrap_content" 
+		        					android:layout_height="wrap_content"
+		        					android:layout_centerVertical="true"
+		        					android:layout_alignParentLeft="true"
+		        					android:layout_marginLeft="5dp"
+		        					android:layout_toLeftOf="@+id/Weibo_cur_icon"
+		        					android:layout_marginRight="10dp"
+		        					android:text="新浪微博"
+		        					android:textSize="16sp"		
+									android:textColor="#333" /> 
+								<TextView
+								    android:id="@+id/Weibo_cur_icon"
+								    
+		            				android:layout_width="wrap_content"
+		        					android:layout_height="wrap_content"        	     	
+		        					android:scaleType="matrix"
+		        					android:layout_centerVertical="true"
+		        					android:layout_toLeftOf="@+id/Weibo_bind"
+		        					android:layout_marginRight="10dp"
+		        					
+		        					
+		        					
+		        					
+		        					android:text="当前帐号"
+		        					android:textSize="10sp"
+		        					android:textColor="#fff"
+		        					android:background="@drawable/cur_user_tip" /> 	
+        					
+						<TextView
+						    android:id="@+id/Weibo_bind"
+        					android:layout_width="wrap_content" 
+        					android:layout_height="wrap_content"
+        					 
+        					android:layout_centerVertical="true"
+        					android:layout_toLeftOf="@+id/Weibo_bind_subicon"
+        					android:layout_marginRight="8dp"
+        					android:text="未绑定"
+        					android:textSize="13sp"		
+							android:textColor="#333" />    
+						<ImageView
+						    android:id="@+id/Weibo_bind_subicon"
+						    
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentRight="true"
+        					android:src="@drawable/mm_submenu" /> 					
+      				</RelativeLayout> 
+      				<TextView
+						   
+        					android:layout_width="wrap_content" 
+        					android:layout_height="wrap_content"
+        					android:layout_marginLeft="10dp"
+        					android:layout_marginRight="10dp" 
+        					android:layout_centerVertical="true"
+        					android:layout_marginTop="5dp"
+        					android:text="注：绑定QQ和新浪微博帐号，可以用于登录车友圈，同时也可以将车友圈的内容分享到相对应的社交网站"
+        					android:textSize="13sp"		
+							android:textColor="#444" />
+		 <Button 
+		     			android:id="@+id/account_logout_btn"
+      				    android:layout_width="fill_parent" 
+        				android:layout_height="wrap_content"
+        				android:layout_marginTop="20dp"
+        				android:layout_marginBottom="14dp"
+        				android:layout_marginLeft="10dp"
+        				android:layout_marginRight="10dp"
+        				android:padding="4dp" 
+        				android:text="退出登录"
+        				android:textSize="18sp"		
+						android:textColor="#fff"
+						android:gravity="center"
+						android:background="@drawable/btn_style_red"
+						android:onClick="onLogout"
+      				    />   
+
+
+
+</LinearLayout>

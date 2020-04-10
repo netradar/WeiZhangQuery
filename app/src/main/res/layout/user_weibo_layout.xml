@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar" >
+
+         <Button
+            android:id="@+id/button_newweibo" 
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+           
+            android:background="@drawable/title_btn_back"
+            android:onClick="onCancelUserWeibo"
+           	android:text="返回"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:gravity="center"
+            android:text="用户信息"
+            android:textColor="#ffffff"
+            android:textSize="19sp"
+             />
+	     <Button
+	        android:id="@+id/user_weibo_msg_btn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+           	android:layout_alignParentRight="true"
+           	android:layout_marginRight="5dp"
+           	android:gravity="center"
+           	android:layout_centerVertical="true"
+            android:background="@drawable/btn_style_blue"
+            android:onClick="onSendPrivateMsg"
+            android:text="私信"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+   
+    </RelativeLayout>
+    
+   <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eef" >
+            <ListView
+	        android:id="@+id/user_weibo_listview"
+	        android:fastScrollEnabled="true"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:cacheColorHint="#00000000"
+	        android:divider="#000"
+	       	android:fadingEdge="none"
+	        android:listSelector="@android:color/transparent"
+	        android:dividerHeight="0dp" >
+		
+  		  </ListView>
+
+ 	</FrameLayout>
+    
+</LinearLayout>

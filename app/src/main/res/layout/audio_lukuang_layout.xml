@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar" >
+
+         <Button
+            android:id="@+id/audio_cancel" 
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+           
+            android:background="@drawable/title_btn_back"
+            android:onClick="onCancelAudiolukuang"
+           	android:text="返回"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+        <TextView
+            
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:gravity="center"
+            android:text="语音聊天室"
+            android:textColor="#ffffff"
+            android:textSize="19sp"
+             />
+ 	
+ 	  <Button 
+	         	android:id="@+id/audio_lukuang_clear"
+			    android:layout_width="80dp" 
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentRight="true" 
+        		android:layout_centerVertical="true"
+        		android:layout_marginRight="5dp"
+        		android:text="清空"
+        		android:textColor="#fff"
+        		android:textSize="15sp"
+				android:background="@drawable/title_btn_right"
+				android:onClick="onClearAll"
+			    /> 
+    </RelativeLayout>
+     <LinearLayout
+           
+          
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+          
+          
+           android:paddingTop="5dp"
+           android:paddingBottom="5dp"
+           
+           android:background="@drawable/timeline_failed_status_background_new"
+           android:orientation="horizontal"
+           
+        
+          
+ 		>
+   
+    
+ 	 
+ 	  <TextView
+        android:id="@+id/audio_lukuang_listen_text"
+        android:layout_width="0dp"
+        
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:singleLine="true"
+       	android:layout_gravity="center|left"
+        android:textColor="#333"
+        android:text="暂停收听"
+        android:textSize="14sp"/> 
+         <ProgressBar
+             
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  style="?android:attr/progressBarStyleSmall"
+			  
+			  android:id="@+id/audio_lukuang_progressBar"
+		 	  
+		 	  android:layout_gravity="center"
+		 	  android:layout_marginRight="8dp"
+		 	 
+			  />
+        
+      
+     </LinearLayout>
+
+ 
+ <FrameLayout
+     android:layout_width="fill_parent"
+	 android:layout_height="0dp"
+	 android:layout_weight="1"
+	        >
+            <ListView
+	        android:id="@+id/audio_lukuang_listview"
+	        android:fastScrollEnabled="true"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:transcriptMode="alwaysScroll" 
+	        android:cacheColorHint="#00000000"
+	        android:divider="#000"
+	       	android:fadingEdge="none"
+	        android:listSelector="@android:color/transparent"
+	        android:dividerHeight="0dp" >
+		
+  		  </ListView>
+  		  
+    <LinearLayout
+        android:id="@+id/rcChat_popup"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+         >
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            layout="@layout/voice_rcd_hint_window" />
+    </LinearLayout>
+
+ </FrameLayout>           
+            
+ <LinearLayout
+           
+          
+           android:layout_width="fill_parent"
+           android:layout_height="50dp"
+           android:paddingLeft="10dp"
+           android:paddingRight="10dp"
+           android:paddingTop="5dp"
+           android:paddingBottom="5dp"
+           android:gravity="center"
+           android:background="@drawable/mmfooter_text_tabbutton_normal"
+           android:orientation="horizontal"
+           
+        
+          
+ >
+     <LinearLayout
+           
+           android:id="@+id/audio_lukuang_bottom"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+          
+           android:gravity="center"
+           android:background="@drawable/popupsdk_button_d"
+           android:orientation="horizontal"
+         
+        
+          
+ >   
+ 	  <ImageView 
+ 	    android:id="@+id/audio_lukuang_speak_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/voicesearch_enter_btn_normal"
+        
+        />
+      <TextView
+        android:id="@+id/audio_lukuang_speak_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:singleLine="true"
+       	android:layout_gravity="center"
+       	android:gravity="center"
+       	
+       	android:text="按住说话，发送语音"
+        android:textColor="#333"
+        android:textSize="14sp"/>  
+    
+      </LinearLayout>
+     </LinearLayout>
+</LinearLayout>

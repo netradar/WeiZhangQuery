@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  	android:background="@drawable/my_msg_item_sel"
+    android:orientation="vertical"
+	
+    >
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="4dp"
+   	android:background="@null">
+    
+    <FrameLayout
+    	 android:id="@+id/my_msg_item_touxiang_framelayout"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	       
+	        android:layout_marginLeft="8dp"
+	        android:layout_marginTop="6dp"
+	        android:layout_marginBottom="6dp">
+	    <carweibo.netradar.lichao.RoundImageView
+	        android:id="@+id/my_msg_item_touxiang"
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:layout_marginTop="6dp"
+	        android:layout_marginBottom="6dp"
+	        android:layout_gravity="left|top"
+	       
+	        android:src="@drawable/switchuser" />
+	     <ImageView
+	                android:id="@+id/my_msg_item_vip_sign"
+	                android:layout_width="16dp"
+	                android:layout_height="16dp"
+	                android:layout_gravity="right|bottom"
+	                android:visibility="gone"
+	                android:src="@drawable/avatar_vip" />
+	     <TextView
+       			    android:id="@+id/my_msg_item_unread_tip"
+       				android:layout_width="wrap_content"
+   					android:layout_height="wrap_content"     
+   					android:layout_gravity="right|top"
+   					android:background="@drawable/tab_unread_bg"
+                	android:gravity="center"
+                 	android:text="45"
+   					
+   					android:textColor="@android:color/white"
+                  	android:textSize="10sp"
+                   	/>
+ </FrameLayout>
+  <TextView
+	        android:id="@+id/my_msg_item_nickname"
+	        android:layout_width="200dp"
+	        android:layout_height="wrap_content"
+	     	android:layout_alignParentTop="true"
+	     	android:layout_marginTop="12dp"
+	       	android:layout_marginLeft="10dp"
+	       	android:layout_toRightOf="@+id/my_msg_item_touxiang_framelayout"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	        android:textColor="#336699"
+	        android:textSize="16sp"
+	         />
+  <TextView
+	        android:id="@+id/my_msg_item_time"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	     	android:layout_alignTop="@+id/my_msg_item_nickname"
+	       	android:layout_marginRight="5dp"
+	        android:layout_alignParentRight="true"
+	       
+	        android:textColor="#666"
+	        android:textSize="12sp"
+	         />
+   <TextView
+        android:id="@+id/my_msg_item_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_msg_item_nickname"
+        android:layout_alignLeft="@+id/my_msg_item_nickname"
+       	android:layout_marginTop="8dp"
+      	android:layout_marginRight="10dp"
+      	android:ellipsize="end"
+     	android:singleLine="true"
+        android:textColor="#666"
+        android:textSize="15sp"/>
+</RelativeLayout>
+</LinearLayout>

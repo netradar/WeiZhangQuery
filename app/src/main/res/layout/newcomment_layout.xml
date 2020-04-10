@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar" >
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/title_btn_back"
+            android:onClick="onCancelNewComment"
+            android:text="取消"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/newcomment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="发布新帖"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+           	android:layout_alignParentRight="true"
+           	android:layout_marginRight="5dp"
+           	android:gravity="center"
+           	android:layout_centerVertical="true"
+            android:background="@drawable/btn_style_blue"
+            android:onClick="onSendComment"
+            android:text="发送"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+       
+    </RelativeLayout>
+  <LinearLayout
+        android:id="@+id/linearLayout_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout10"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        
+        android:orientation="vertical"
+        android:background="@drawable/newweibo_backgrounds" > 
+    <EditText
+        android:id="@+id/comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:minLines="5"
+        android:maxLines="10"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="写评论..."
+        android:inputType="textMultiLine"
+        android:maxLength="200"
+        android:textColor="#444"
+        android:textSize="17sp" >
+
+        <requestFocus />
+    </EditText>
+   	   <TextView
+	       android:id="@+id/newcomment_words_count"
+	       android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:layout_gravity="right"
+	       android:gravity="right"
+	       android:text="0/200"
+	       android:textColor="#666"
+	       android:textSize="15sp" /> 
+  </LinearLayout>
+   
+ 	
+</RelativeLayout>

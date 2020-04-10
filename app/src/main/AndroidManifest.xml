@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="carweibo.netradar.lichao"
+    android:versionCode="3"
+    android:versionName="3.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission> 
+	 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/> 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> 
+    <uses-permission android:name="android.permission.VIBRATE" />
+     <uses-permission android:name="android.permission.RECORD_AUDIO"> </uses-permission>
+    
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />   
+  
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />   
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />   
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />   
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION" /> 
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+<uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <application
+        android:allowBackup="true"
+        android:name="DBUility"
+        android:icon="@drawable/icon_lanuch1"
+        android:label="西安车友圈"
+        android:theme="@style/AppTheme" >
+     <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="c6de25383a0037fe1f8628825c1b547c" />
+	<activity
+       android:name="com.tencent.tauth.AuthActivity"
+       
+       android:noHistory="true"
+       android:launchMode="singleTask" >
+	    <intent-filter>
+	           <action android:name="android.intent.action.VIEW" />
+	       	<category android:name="android.intent.category.DEFAULT" />
+	       	<category android:name="android.intent.category.BROWSABLE" />
+	           <data android:scheme="tencent100557777" />
+	    </intent-filter>
+     </activity>
+     
+        <activity
+            android:name="carweibo.netradar.lichao.Appstart"
+            android:label="西安车友圈" 
+            android:windowSoftInputMode="stateHidden|adjustPan|adjustUnspecified"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="MainTabActivity"
+            android:label="MainTabActivity" 
+           android:launchMode="standard"
+          
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+
+            
+        </activity>
+        <activity
+            android:label="Query"
+            android:name="Query" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="TimeLine"
+            android:name="TimeLine"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+        <activity
+            android:label="More"
+            android:name="More" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+        <activity
+            android:label="AddCar"
+            android:name="AddCar" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+        <activity
+            android:label="LuKuang"
+            android:name="LuKuang" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="AudioLukuang"
+            android:name="AudioLukuang" 
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+        <activity
+            android:label="Detail"
+            android:name="Detail" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+    	 <activity
+            android:label="CarInfo"
+            android:name="CarInfo" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+        <activity
+            android:label="Feedback"
+            android:name="Feedback" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="About"
+            android:name="About" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+             </activity>
+         <activity
+            android:label="CarCircle"
+            android:name="CarCircle" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+        <activity
+            android:label="Account"
+            android:name="Account" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="Login"
+            android:name="Login" 
+            android:launchMode="standard"
+            
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>    
+       <activity
+            android:label="Register"
+            android:name="Register" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>   
+           <activity
+            android:label="SelectUser"
+            android:name="SelectUser" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="AccountInfo"
+            android:name="AccountInfo" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+        <activity
+            android:label="NewWeibo"
+            android:name="NewWeibo" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+             <intent-filter android:label="分享到车友圈">  
+                <action android:name="android.intent.action.SEND" />  
+                <category android:name="android.intent.category.DEFAULT" />  
+                <data android:mimeType="image/*" />  
+            </intent-filter>  
+            <intent-filter android:label="分享到车友圈">  
+                <action android:name="android.intent.action.SEND_MULTIPLE" />  
+                <category android:name="android.intent.category.DEFAULT" />  
+                <data android:mimeType="image/*" />  
+            </intent-filter> 
+             <intent-filter android:label="分享到车友圈">  
+                <action android:name="android.intent.action.SEND" />  
+                <category android:name="android.intent.category.DEFAULT" />  
+                <data android:mimeType="text/*" />  
+            </intent-filter> 
+        </activity>
+         <activity
+            android:label="CarWeiboLogin"
+            android:name="CarWeiboLogin" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="ChangeNickname"
+            android:name="ChangeNickname" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="WeiboDetail"
+            android:name="WeiboDetail" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="ViewPic"
+            android:name="ViewPic" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="NewComment"
+            android:name="NewComment" 
+            android:launchMode="standard"
+            
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="UserWeiboList"
+            android:name="UserWeiboList"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+        <activity
+            android:label="PrivateMsgChat"
+            android:name="PrivateMsgChat"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait"
+           
+            >
+            
+        </activity>
+        
+          <activity
+            android:label="MyMessageList"
+            android:name="MyMessageList"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="DraftList"
+            android:name="DraftList"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="Score"
+            android:name="Score"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="PoiList"
+            android:name="PoiList"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="VenderList"
+            android:name="VenderList"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="NewVender"
+            android:name="NewVender"
+            android:launchMode="standard"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+          <activity
+            android:label="VenderDetail"
+            android:name="VenderDetail"
+            android:launchMode="standard"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+        <activity
+            android:label="NewVenderComment"
+            android:name="NewVenderComment"
+            android:launchMode="standard"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+        <activity
+            android:label="PoiDetailMap"
+            android:name="carweibo.netradar.lichao.PoiDetailMap"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+         <activity
+            android:label="Heart4MainActivity"
+            android:name="heart4.netradar.lichao.Heart4MainActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden"
+           
+           >
+            
+        </activity>
+        <activity
+            android:label="PicSrcSelect"
+            android:name="PicSrcSelect" 
+            android:launchMode="standard"
+            
+            android:theme="@style/MyDialogStyleBottom">
+            
+        </activity>
+      
+         <activity
+            android:label="GetScore"
+            android:name="GetScore" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle">
+            
+        </activity>
+          <activity
+            android:label="Dialog"
+            android:name="Dialog" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle">
+            
+        </activity>
+        <activity
+            android:label="VerifyDialog"
+            android:name="VerifyDialog" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle">
+            
+        </activity>
+        <activity
+            android:label="ShareDialog"
+            android:name="ShareDialog" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle">
+            
+        </activity>
+         <activity
+            android:label="ShareDialog1"
+            android:name="ShareDialog1" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle">
+            
+        </activity>
+        <activity
+            android:label="NewVersionDialog"
+            android:name="NewVersionDialog" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle">
+            
+        </activity>
+        <activity
+            android:label="Notice"
+            android:name="Notice" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle">
+            
+        </activity>
+        <activity
+            android:label="InfoNoticeDialog"
+            android:name="InfoNoticeDialog" 
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle">
+            
+        </activity>
+         <activity
+        android:name="net.youmi.android.AdBrowser"
+        android:configChanges="keyboard|keyboardHidden|orientation"  
+        android:screenOrientation="portrait"          
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+    </activity>
+    <service
+        android:name="net.youmi.android.AdService"
+        android:exported="false" >
+    </service>
+    <service android:name="ServerService"> 
+
+	</service>
+    <receiver 
+        android:name="net.youmi.android.AdReceiver" >
+        <intent-filter>
+            <action android:name="android.intent.action.PACKAGE_ADDED" />
+            <data android:scheme="package" />
+        </intent-filter>
+    </receiver> 
+        
+    </application>
+
+</manifest>

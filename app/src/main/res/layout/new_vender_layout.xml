@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar" >
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/title_btn_back"
+            android:onClick="onCancelNewVender"
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/new_vender"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+           	android:layout_alignParentRight="true"
+           	android:layout_marginRight="5dp"
+           	android:gravity="center"
+           	android:layout_centerVertical="true"
+            android:background="@drawable/btn_style_blue"
+            android:onClick="onSendNewVender"
+            android:text="@string/add_vender"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+       
+    </RelativeLayout>
+    
+    <EditText
+        android:id="@+id/vender_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout10"
+        
+        android:layout_marginTop="5dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+       	android:singleLine="true"
+        android:background="@drawable/newweibo_backgrounds"
+       
+        android:hint="@string/vender_name"
+        
+        android:maxLength="20"
+        android:textColor="#444"
+        android:textSize="17sp" />
+
+      <EditText
+        android:id="@+id/vender_addr"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vender_name"
+      
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+       	android:singleLine="true"
+        android:background="@drawable/newweibo_backgrounds"
+        android:layout_centerVertical="true"
+        android:hint="@string/vender_addr"
+        
+        android:maxLength="30"
+        android:textColor="#444"
+        android:textSize="17sp" />
+        
+  <LinearLayout
+        android:id="@+id/vender_comment_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/vender_addr"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        
+        android:orientation="vertical"
+        android:background="@drawable/newweibo_backgrounds" > 
+ 
+    <EditText
+        android:id="@+id/vender_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:background="@null"
+        android:maxLines="10"
+        android:minLines="2"
+       
+        android:gravity="top"
+        android:hint="@string/vender_description"
+        android:inputType="textMultiLine"
+        android:maxLength="100"
+        android:textColor="#444"
+        android:textSize="17sp" />
+
+       
+    
+  
+ 	   <TextView
+	        android:id="@+id/new_vender_words_count"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	       	android:layout_gravity="right"
+	       	android:gravity="right"
+	        android:text="@string/hundred_count"
+	        android:textColor="#666"
+	        android:textSize="15sp" /> 
+	        
+ 	   </LinearLayout>
+ 	   
+<TextView
+	        android:id="@+id/vender_img"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginLeft="15dp"
+	        android:layout_below="@+id/vender_comment_layout"
+	       	android:layout_gravity="left"
+	       	android:gravity="left"
+	        android:text="@string/vender_pic"
+	        android:textColor="#444"
+	        android:textSize="14sp" />   
+<LinearLayout
+        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+       
+        android:layout_below="@+id/vender_img"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="15dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:background="@drawable/newweibo_backgrounds" > 
+   
+ 	
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+          >
+
+            <LinearLayout
+                android:id="@+id/new_vender_addImage_layout1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                 >
+
+                <ImageView
+                    android:id="@+id/new_vender_addImage1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="onAddPic"
+                    android:layout_gravity="left|bottom"
+                    android:contentDescription="@string/image_content"
+                    android:src="@drawable/pic_add_btn" />
+            </LinearLayout>
+			
+            <ImageView
+                android:id="@+id/new_vender_deleteImage1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|top"
+                android:onClick="onDeletePic"
+                android:contentDescription="@string/image_content"
+                android:src="@drawable/delete_pic" />
+            
+        </FrameLayout>
+
+	
+        <FrameLayout
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+             >
+
+            <LinearLayout
+                android:id="@+id/new_vender_addImage_layout2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:layout_gravity="left|bottom"  >
+
+                <ImageView
+                    android:id="@+id/new_vender_addImage2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="onAddPic"
+                  	android:contentDescription="@string/image_content"
+                    android:src="@drawable/pic_add_btn" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/new_vender_deleteImage2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|top"
+                android:onClick="onDeletePic"
+                android:contentDescription="@string/image_content"
+                android:src="@drawable/delete_pic" />
+        </FrameLayout>
+
+        <FrameLayout
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+             >
+
+            <LinearLayout
+                android:id="@+id/new_vender_addImage_layout3"
+               android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:layout_gravity="left|bottom"  >
+
+                <ImageView
+                    android:id="@+id/new_vender_addImage3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="onAddPic"
+                    android:contentDescription="@string/image_content"
+                    android:src="@drawable/pic_add_btn" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/new_vender_deleteImage3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|top"
+                android:onClick="onDeletePic"
+                android:contentDescription="@string/image_content"
+                android:src="@drawable/delete_pic" />
+        </FrameLayout>
+
+   
+</LinearLayout>
+ 	
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  	android:background="@drawable/my_msg_item_sel"
+    android:orientation="vertical"
+ 	
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  
+   	android:paddingTop="5dp"
+   	android:paddingBottom="5dp"
+    android:background="@null">
+    
+    	<ImageView
+    	    android:id="@+id/poi_item_icon"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentLeft="true"
+    	    android:layout_marginLeft="5dp"
+    	   
+    	    android:layout_centerVertical="true"
+    	    android:src="@drawable/car_icon" />
+    	
+    	<TextView
+        android:id="@+id/poi_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignParentTop="true"
+     	
+       	android:layout_marginLeft="10dp"
+       	android:layout_toRightOf="@+id/poi_item_icon"
+       	android:layout_toLeftOf="@+id/poi_item_distinct"
+       	android:layout_marginRight="15dp"
+       	
+    	
+        android:textColor="#000000"
+        android:textSize="17sp"
+         />
+    	<TextView
+        android:id="@+id/poi_item_pos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignLeft="@+id/poi_item_name"
+     	android:layout_below="@+id/poi_item_name"
+        android:layout_marginTop="5dp"
+       	android:layout_toLeftOf="@+id/poi_item_distinct"
+       	android:layout_marginRight="15dp"
+      
+        android:textColor="#555"
+        android:textSize="14sp"
+         />
+    <TextView
+        android:id="@+id/poi_item_distinct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:layout_toLeftOf="@+id/submiticon"
+       	android:layout_marginRight="20dp"
+        android:layout_centerVertical="true"
+     	
+     	
+     	
+     	
+        android:textColor="#555"
+        android:textSize="14sp"/>
+
+
+
+    	<ImageView
+    	android:id="@+id/submiticon"
+     	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"        	     	
+        android:scaleType="matrix"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:onClick="true"
+        android:src="@drawable/mm_submenu" />
+
+
+   
+</RelativeLayout>
+</LinearLayout>

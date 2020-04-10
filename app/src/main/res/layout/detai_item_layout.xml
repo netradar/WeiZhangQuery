@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="@drawable/detail_item_background"
+   
+    >
+
+    	
+    	<TextView
+        android:id="@+id/w_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignParentTop="true"
+     	android:layout_alignParentLeft="true"
+       	android:layout_marginLeft="2dp"
+       	android:layout_marginTop="2dp"
+     	android:text="时间："     	
+     	android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="15sp"
+         />
+    	<TextView
+        android:id="@+id/w_timeC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignTop="@+id/w_time"
+     	android:layout_toRightOf="@+id/w_time"
+       	android:layout_marginLeft="2dp"
+       
+     	    	
+        android:textColor="#555555"
+        android:textSize="15sp"
+         />
+    	<TextView
+        android:id="@+id/w_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignParentRight="true"
+     	android:layout_alignTop="@+id/w_time"
+       	android:layout_marginRight="3dp"
+       
+     	android:gravity="center_horizontal"
+        android:textColor="#000"
+        android:textSize="15sp"
+         />
+    	
+    	<TextView
+        android:id="@+id/w_addr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/w_timeC"
+     	android:layout_alignLeft="@+id/w_time"
+       	
+       	android:layout_marginTop="2dp"
+     	android:text="地点："   
+     	android:textStyle="bold"  	
+        android:textColor="#000000"
+        android:textSize="15sp"
+         />
+
+ 	<TextView
+        android:id="@+id/w_addrC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignTop="@+id/w_addr"
+     	android:layout_toRightOf="@+id/w_addr"
+       	android:layout_marginLeft="2dp"
+      
+         	
+        android:textColor="#555555"
+        android:textSize="15sp"
+         />
+
+ <TextView
+        android:id="@+id/w_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/w_addrC"
+     	android:layout_alignLeft="@+id/w_addr"
+       	
+       	android:layout_marginTop="2dp"
+     	android:text="行为："     	
+     	android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="15sp"
+         />
+
+ 	<TextView
+        android:id="@+id/w_typeC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignTop="@+id/w_type"
+     	android:layout_toRightOf="@+id/w_type"
+       	android:layout_marginLeft="2dp"
+       	
+       	
+        android:textColor="#555555"
+        android:textSize="15sp"
+         />
+ 	
+ 	<TextView
+        android:id="@+id/w_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/w_typeC"
+     	android:layout_alignLeft="@+id/w_type"
+       	
+       	android:layout_marginTop="2dp"
+     	android:text="罚款："     	
+     	android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="15sp"
+         />
+
+ 	<TextView
+        android:id="@+id/w_moneyC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignTop="@+id/w_money"
+     	android:layout_toRightOf="@+id/w_money"
+       	android:layout_marginLeft="2dp"
+    
+         	
+        android:textColor="#555555"
+        android:textSize="15sp"
+         />
+ 	
+ 	<TextView
+        android:id="@+id/w_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/w_moneyC"
+     	android:layout_alignLeft="@+id/w_money"
+       	
+       	android:layout_marginTop="2dp"
+     	android:text="扣分："     	
+     	android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="15sp"
+         />
+
+ 	<TextView
+        android:id="@+id/w_scoreC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignTop="@+id/w_score"
+     	android:layout_toRightOf="@+id/w_score"
+       	android:layout_marginLeft="2dp"
+       	
+         	
+        android:textColor="#555555"
+        android:textSize="15sp"
+         />
+ 	
+ 	<TextView
+        android:id="@+id/w_src"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/w_scoreC"
+     	android:layout_alignLeft="@+id/w_score"
+       	
+       	android:layout_marginTop="2dp"
+     	android:text="来源："     	
+     	android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="15sp"
+         />
+
+ 	<TextView
+        android:id="@+id/w_srcC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignTop="@+id/w_src"
+     	android:layout_toRightOf="@+id/w_src"
+       	android:layout_marginLeft="2dp"
+       	
+        android:textColor="#555555"
+        android:textSize="15sp"
+         />
+ 	
+
+
+   
+</RelativeLayout>

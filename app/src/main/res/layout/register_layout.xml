@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/title_btn_back"
+            android:onClick="onCancelRegister"
+            android:text="取消"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/carinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="注册新帐号"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        
+    </RelativeLayout>
+
+ <LinearLayout
+        android:id="@+id/relativeLayout_login"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#eee" >
+        <RelativeLayout
+		        android:id="@+id/relativeLayout6"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="25dp"
+		        android:layout_marginRight="25dp"
+		        android:background="@drawable/login_top_background" >
+		
+		        <TextView
+		            android:id="@+id/registe_nickname"
+		            android:layout_width="90dp"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            
+		            android:gravity="right"
+		            android:text="昵称："
+		           
+		           	android:textColor="#000"
+		            android:textSize="17sp" />
+			    <EditText
+		            android:id="@+id/registe_nickname_edit"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="8dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_toRightOf="@+id/registe_nickname"
+		            android:background="@null"
+		            android:hint="您在车友圈的昵称"
+		            android:maxLength="10"
+		            android:singleLine="true"
+		            android:textColor="#000"
+		            android:textSize="17sp" />
+			    </RelativeLayout>
+		    <RelativeLayout
+		        android:id="@+id/relativeLayout6"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        
+		        android:layout_marginLeft="25dp"
+		        android:layout_marginRight="25dp"
+		        android:background="@drawable/login_middle_background" >
+		
+		        <TextView
+		            android:id="@+id/registe_username"
+		            android:layout_width="90dp"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            
+		            android:gravity="right"
+		            android:text="帐号："
+		           	android:textColor="#000"
+		            android:textSize="17sp" />
+			    <EditText
+		            android:id="@+id/registe_username_edit"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="8dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_toRightOf="@+id/registe_username"
+		            android:background="@null"
+		            android:hint="用于登录的用户名"
+		            android:maxLength="15"
+		            android:singleLine="true"
+		            android:textColor="#000"
+		            android:textSize="17sp" />
+			    </RelativeLayout>
+		<RelativeLayout
+		        android:id="@+id/relativeLayout6"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="25dp"
+		        android:layout_marginRight="25dp"
+		        android:background="@drawable/login_middle_background" >
+		
+		        <TextView
+		            android:id="@+id/password"
+		            android:layout_width="90dp"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            
+		            android:gravity="right"
+		            android:text="密码："
+		           android:maxLength="20"
+		           	android:textColor="#000"
+		            android:textSize="17sp" />
+			    <EditText
+		            android:id="@+id/registe_password_edit"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="8dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_toRightOf="@+id/password"
+		            android:background="@null"
+		            android:hint="输入密码"
+		             android:password="true"
+		            android:singleLine="true"
+		            android:textColor="#000"
+		            android:textSize="17sp" />
+			    </RelativeLayout>
+	
+		 <RelativeLayout
+		        android:id="@+id/relativeLayout6"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="25dp"
+		        android:layout_marginRight="25dp"
+		        android:background="@drawable/login_bottom_background" >
+		
+		        <TextView
+		            android:id="@+id/password2"
+		            android:layout_width="90dp"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            
+		            android:gravity="right"
+		            android:text="确认密码："
+		            android:maxLength="20"
+		           	android:textColor="#000"
+		            android:textSize="17sp" />
+			    <EditText
+		            android:id="@+id/registe_password2_edit"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="8dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_toRightOf="@+id/password2"
+		            android:background="@null"
+		            android:hint="再次输入密码"
+		            android:password="true"
+		            android:singleLine="true"
+		            android:textColor="#000"
+		            android:textSize="17sp" />
+			    </RelativeLayout>
+
+		 <RelativeLayout
+		        android:id="@+id/relativeLayout6"
+		        android:layout_width="fill_parent"
+		        android:layout_height="60dp"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginLeft="25dp"
+		        android:layout_marginRight="25dp"
+		        android:clickable="true"
+		        
+		        android:onClick="onChangeTouxiang"
+		        android:background="@drawable/login_imput_background" >
+		
+		     <carweibo.netradar.lichao.RoundImageView
+			  	   android:layout_width="40dp"
+			        android:layout_height="40dp"
+			       
+			        android:layout_marginLeft="20dp"
+		            android:id="@+id/registe_touxiang"
+		           	android:layout_centerVertical="true"
+		     
+		        	
+		            
+		            android:src="@drawable/switchuser" >
+		            </carweibo.netradar.lichao.RoundImageView>
+		        <TextView
+		            android:id="@+id/textview111"
+		            android:layout_width="90dp"
+		            android:layout_height="wrap_content"
+		           
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/registe_submmit"
+		            android:layout_marginRight="10dp"
+		            android:gravity="right"
+		            android:text="更换头像"
+		            
+		           	android:textColor="#555"
+		            android:textSize="14sp" />
+		        <ImageView
+		            		android:id="@+id/registe_submmit"
+            				android:layout_width="wrap_content"
+        					android:layout_height="wrap_content"        	     	
+        					android:scaleType="matrix"
+        					android:layout_centerVertical="true"
+        					android:layout_alignParentRight="true"
+        					android:src="@drawable/mm_submenu" />	
+        </RelativeLayout>
+			    
+
+		 <Button 
+      				    android:layout_width="fill_parent" 
+        				android:layout_height="wrap_content"
+        				android:layout_marginTop="14dp"
+        				android:layout_marginBottom="14dp"
+        				android:layout_marginLeft="20dp"
+        				android:layout_marginRight="20dp"
+        				android:padding="4dp" 
+        				android:text="提交注册"
+        				android:textSize="18sp"		
+						android:textColor="#fff"
+						android:gravity="center"
+						android:background="@drawable/btn_query"
+						android:onClick="onSubmmit"
+      				    />   
+
+</LinearLayout>
+
+</LinearLayout>

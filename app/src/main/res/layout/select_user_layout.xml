@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar" >
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/title_btn_back"
+            android:onClick="onCancelSelectUser"
+            android:text="取消"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/selectuser_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="选择帐号"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+             />
+
+        
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/selectuser_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:focusable="false"
+		android:focusableInTouchMode="false"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:cacheColorHint="#000"
+        android:dividerHeight="0dp"
+        android:divider="#000">
+    </ListView>
+	 <RelativeLayout
+		        android:id="@+id/relativeLayout6"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp"
+		        >
+			    
+               
+				<Button
+			        android:id="@+id/btn_login"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentRight="true"
+			        
+			       
+			        android:layout_marginTop="10dp"
+			        android:background="@drawable/btn_login_sel"
+			        android:onClick="onSelectLogin"
+			        android:text="登录车友圈"
+			        android:textColor="#fff"
+			        android:textSize="18sp" />
+			    </RelativeLayout>
+</LinearLayout>

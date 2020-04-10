@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/vender_detail_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_bar" >
+	<Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/title_btn_back"
+            android:onClick="onCancelVenderDetail"
+            android:text="@string/back"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+     
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/vender_detail"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            />
+	  
+   
+    </RelativeLayout>
+    
+ <FrameLayout
+     		android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/vender_detail_title_layout"
+            android:layout_above="@+id/vender_detail_bottom_toolbar"
+           
+            >
+        
+           <ListView
+		        android:id="@+id/vender_detail_listview"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content" 
+		        
+				
+		       	android:fadingEdge="none"
+		        android:cacheColorHint="#00000000"
+		        android:listSelector="@android:color/transparent"
+		        android:dividerHeight="0dp"
+		        android:divider="#000">
+   			</ListView>
+   	  <LinearLayout
+	     android:id="@+id/vender_detail_nav"
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"
+	     android:background="#eee"
+	     android:orientation="horizontal"
+	     android:baselineAligned="false"
+	     android:gravity="bottom"
+	     android:visibility="gone"
+       >
+			 <LinearLayout
+				    
+				     android:layout_width="fill_parent"
+				     android:layout_height="40dp"
+				     android:background="@drawable/statusdetail_comment_top_background"
+				     android:orientation="horizontal"
+				     android:baselineAligned="false"
+				     android:gravity="bottom"
+				   	
+			       >
+			 		<RelativeLayout
+           
+						     android:layout_width="wrap_content"
+						     android:layout_height="fill_parent"
+						     android:layout_marginLeft="15dp"
+						  	 
+				      		 >
+							    <TextView
+									android:id="@+id/vender_detail_bad_comment_f"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:clickable="true"
+									android:onClick="onSelectBadList"
+									android:layout_centerVertical="true"
+									android:layout_centerHorizontal="true"
+									android:text="@string/bad_comment"
+									android:textSize="16sp"
+									android:textColor="#222"/>
+							     <ImageView
+						         	    
+					         	    android:id="@+id/vender_detail_bad_nav_f"
+					                android:layout_width="wrap_content"
+					                android:layout_height="wrap_content"
+					                android:layout_centerHorizontal="true"
+					                android:layout_alignParentBottom="true"
+					                android:src="@drawable/statusdetail_comment_top_arrow"
+					                android:contentDescription="@string/image_content"
+					                    />
+						</RelativeLayout>
+		
+					<RelativeLayout
+           
+						     android:layout_width="wrap_content"
+						     android:layout_height="fill_parent"
+						     android:layout_marginLeft="30dp"
+						  	 
+				      		 >
+							    <TextView
+									android:id="@+id/vender_detail_good_comment_f"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:clickable="true"
+									android:onClick="onSelectGoodList"
+									android:layout_centerVertical="true"
+									android:layout_centerHorizontal="true"
+									android:text="@string/good_comment"
+									android:textSize="16sp"
+									android:textColor="#222"/>
+							     <ImageView
+						         	    
+					         	    android:id="@+id/vender_detail_good_nav_f"
+					                android:layout_width="wrap_content"
+					                android:layout_height="wrap_content"
+					                android:layout_centerHorizontal="true"
+					                android:layout_alignParentBottom="true"
+					                android:src="@drawable/statusdetail_comment_top_arrow"
+					                android:contentDescription="@string/image_content"
+					                    />
+						</RelativeLayout>
+
+     </LinearLayout>
+     </LinearLayout>
+ </FrameLayout>
+                
+ <LinearLayout
+           
+           android:id="@+id/vender_detail_bottom_toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                
+                android:background="@drawable/weibo_bottom_background_new"
+                android:orientation="horizontal"
+                
+             
+                android:layout_alignParentBottom="true"
+                android:baselineAligned="false"
+                >
+			    <LinearLayout
+	                android:id="@+id/vender_bottom_share_layout"
+	                android:layout_width="wrap_content"
+	                android:layout_height="fill_parent"
+	                
+	                android:orientation="horizontal"
+	                android:background="@drawable/weibo_bottom_mid_btn_sel"
+	                android:layout_weight="1"
+	            	android:clickable="true"
+	            	android:onClick="onShareVender"
+	                android:gravity="center"
+	                
+	                >
+	         	<ImageView
+	         	    
+	         	    android:id="@+id/vender_bottom_share_image"
+	                android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   	android:contentDescription="@string/image_content"
+                    android:src="@drawable/timeline_icon_redirect"
+                    
+                    />
+	         	<TextView
+	         	   
+	                android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/share"
+                    android:textSize="12sp"
+                    android:textColor="#929292"
+                    
+                    
+                   />
+	          </LinearLayout>  
+	         <LinearLayout
+	                android:id="@+id/vender_bottom_bad_layout"
+	                android:layout_width="wrap_content"
+	                android:layout_height="fill_parent"
+	                android:layout_marginLeft="2dp"
+	                android:orientation="horizontal"
+	                android:background="@drawable/weibo_bottom_mid_btn_sel"
+	                android:layout_weight="1"
+	            	android:clickable="true"
+	            	android:onClick="onBadComment"
+	                android:gravity="center"
+	                
+	                >
+	         	<ImageView
+	         	    
+	         	    android:id="@+id/weibo_bottom_share_image"
+	                android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   
+                    android:src="@drawable/timeline_icon_unlike_bad"
+                    android:contentDescription="@string/image_content"
+                    
+                    />
+	         	<TextView
+	         	    android:id="@+id/weibo_bottom_share_text"
+	                android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/bad_comment"
+                    android:textSize="12sp"
+                    android:textColor="#929292"
+                    
+                    
+                   />
+	          </LinearLayout>  
+	         
+	          <LinearLayout
+	                android:id="@+id/bottom_comment"
+	                android:layout_width="wrap_content"
+	                android:layout_height="fill_parent"
+	                android:background="@drawable/weibo_bottom_mid_btn_sel"
+	            	android:layout_weight="1"
+	                android:clickable="true"
+	                android:onClick="onGoodComment"
+	                android:layout_marginLeft="2dp"
+	                android:gravity="center"
+	                >
+	         	<ImageView
+	                android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/image_content"
+                    android:src="@drawable/timeline_icon_unlike"
+                    
+                    />
+	         	<TextView
+	         	    
+	                android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/good_comment"
+                    android:textSize="12sp"
+                    android:textColor="#929292"
+                   />
+	          </LinearLayout> 
+	          
+	    
+         
+      </LinearLayout>
+    
+   
+</RelativeLayout>

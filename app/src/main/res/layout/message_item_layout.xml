@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  	android:background="@null"
+    android:orientation="vertical"
+	android:paddingBottom="25dp"
+	android:descendantFocusability="blocksDescendants"
+    >
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="4dp"
+   	android:background="@null">
+    
+    <FrameLayout
+    	 android:id="@+id/messagefrom_item_touxiang_framelayout"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginTop="8dp">
+	    <carweibo.netradar.lichao.RoundImageView
+	        android:id="@+id/messagefrom_item_touxiang"
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:layout_gravity="left|top"
+	       
+	        android:src="@drawable/switchuser" />
+	     <ImageView
+	                android:id="@+id/messagefrom_item_vip_sign"
+	                android:layout_width="16dp"
+	                android:layout_height="16dp"
+	                android:layout_gravity="right|bottom"
+	                android:visibility="gone"
+	                android:src="@drawable/avatar_vip" />
+ </FrameLayout>
+    	
+<FrameLayout
+    
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+  	
+    
+    android:layout_toRightOf="@+id/messagefrom_item_touxiang_framelayout"
+    android:layout_toLeftOf="@+id/messageto_item_touxiang_framelayout"
+    android:layout_alignParentTop="true"
+	android:layout_marginTop="8dp"
+    >  
+   <LinearLayout
+        android:id="@+id/message_item_from_layout"
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginRight="10dp"
+	  	android:background="@null"
+	   >
+	    <LinearLayout
+	        android:id="@+id/message_item_from_content_layout"
+	        android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		  	android:background="@drawable/message_item_msg_from_sel"
+		    android:orientation="vertical">
+	    	<TextView
+		        android:id="@+id/message_item_from_time"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		     	
+		       	android:layout_gravity="center"
+		       	
+		       
+		        android:textColor="#336699"
+		        android:textSize="12sp"
+		         />
+	     	<TextView
+		        android:id="@+id/message_item_from_type_tip"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		     	android:layout_gravity="left"
+		       	android:textColor="#336699"
+		        android:textSize="15sp"
+		         />
+		    <TextView
+		        android:id="@+id/message_item_from_msg"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		         android:autoLink="web"
+       			 android:ellipsize="end"
+       			 android:linksClickable="true"
+		     	
+		        android:textColor="#444"
+		        android:textSize="17sp"/>
+		     <Button
+	         	    
+	         	    android:id="@+id/message_item_view_detail"
+	                android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="left"
+                    android:gravity="center"
+                    android:text="查看原帖"
+                    android:textSize="14sp"
+                    android:textColor="#336699"
+                  	android:onClick="onViewDetail"
+                    android:background="@drawable/btn_dialog_cancel"
+                    
+                    />
+		    
+		</LinearLayout>
+		<FrameLayout
+		    android:id="@+id/message_item_from_status"
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:layout_gravity="center"
+		   
+		    >
+		    
+		    <ImageView
+		        android:id="@+id/message_item_from_fail"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:layout_gravity="center"
+				  android:src="@drawable/msg_state_fail_resend"
+				  
+				  />
+		    <ProgressBar
+		          android:id="@+id/message_item_from_sending"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  style="?android:attr/progressBarStyleSmall"
+				  android:layout_gravity="center"
+				
+				  
+				 
+				  />
+		</FrameLayout>
+	</LinearLayout>
+	
+   <LinearLayout
+        android:id="@+id/message_item_to_layout"
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="right"
+	    android:layout_marginLeft="10dp"
+	  	android:background="@null"
+	    android:orientation="horizontal"
+	    android:baselineAligned="false">
+		<FrameLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		   
+		    
+		    >
+		    
+		    <ImageView
+		        android:id="@+id/message_item_to_fail"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:layout_gravity="center"
+				  android:src="@drawable/msg_state_fail_resend"
+				  
+				  />
+		    <ProgressBar
+		          android:id="@+id/message_item_to_sending"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  style="?android:attr/progressBarStyleSmall"
+				  android:layout_gravity="center"
+				
+				  
+				  
+				  />
+		</FrameLayout>
+	    <LinearLayout
+	        
+	        android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		  	android:background="@drawable/message_item_msg_to_sel"
+		  	
+		  	android:layout_gravity="right"
+		    android:orientation="vertical">
+	    	<TextView
+		        android:id="@+id/message_item_to_time"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		     	
+		       	android:layout_gravity="center"
+		       	
+		       
+		        android:textColor="#336699"
+		        android:textSize="12sp"
+		         />
+	     	
+		    <TextView
+		        android:id="@+id/message_item_to_msg"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		         android:autoLink="web"
+        		android:ellipsize="end"
+		        android:linksClickable="true"
+				     	
+		        android:textColor="#444"
+		        android:textSize="17sp"/>
+		    
+		</LinearLayout>
+		
+	</LinearLayout>
+</FrameLayout>
+   <FrameLayout
+    	 android:id="@+id/messageto_item_touxiang_framelayout"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="5dp"
+	        android:layout_marginTop="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+			
+    		>
+	    <carweibo.netradar.lichao.RoundImageView
+	        android:id="@+id/messageto_item_touxiang"
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:layout_gravity="right|top"
+	       
+	        android:src="@drawable/switchuser" />
+	     <ImageView
+            android:id="@+id/messageto_item_vip_sign"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="right|bottom"
+             android:visibility="gone"
+            android:src="@drawable/avatar_vip" />
+ </FrameLayout>
+   
+</RelativeLayout>
+</LinearLayout>
